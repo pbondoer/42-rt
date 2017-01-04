@@ -1,0 +1,1150 @@
+New log started
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+
+___________________________________________________________
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+___________________________________________________________
+
+___________________________________________________________
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+___________________________________________________________
+
+___________________________________________________________
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:44:15: error: redefinition of 'example2'
+__kernel void   example2(                                                                                         
+              ^
+<program source>:29:15: note: previous definition is here
+__kernel void   example2(                                                                                         
+              ^
+
+
+___________________________________________________________
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+
+___________________________________________________________
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+___________________________________________________________
+
+___________________________________________________________
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+___________________________________________________________
+
+___________________________________________________________
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:31:22: error: parameter may not be qualified with an address space
+                                        __global t_argn argn,                                                                                              
+                     ^
+<program source>:33:24: error: parameter may not be qualified with an address space
+                                        __global t_camera cam)                                                                                                                          
+                       ^
+
+
+___________________________________________________________
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:31:22: error: parameter may not be qualified with an address space
+                                        __global t_argn argn,                                                                                              
+                     ^
+<program source>:33:24: error: parameter may not be qualified with an address space
+                                        __global t_camera cam)                                                                                                                          
+                       ^
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:31:22: error: parameter may not be qualified with an address space
+                                        __global t_argn argn,                                                                                              
+                     ^
+<program source>:33:24: error: parameter may not be qualified with an address space
+                                        __global t_camera cam)                                                                                                                          
+                       ^
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:31:22: error: parameter may not be qualified with an address space
+                                        __global t_argn argn,                                                                                              
+                     ^
+<program source>:33:24: error: parameter may not be qualified with an address space
+                                        __global t_camera cam)                                                                                                                          
+                       ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_INVALID_WORK_GROUP_SIZE] : OpenCL Error : clEnqueueNDRangeKernel failed: local_size[0] = 16 must evenly divide into global_size[0] = 2070601
+[ft_error] - starting of kernel failed
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:38:8: warning: comparison of integers of different signs: 'size_t' (aka 'unsigned long') and 'int'
+        if (i >= argn->screen_size.x * argn->screen_size.y)                                                                                                                                   
+     ~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_INVALID_BUFFER_SIZE] : OpenCL Error : clCreateBuffer failed: Invalid buffer size (0 bytes)!
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:31:47: error: unknown type name 'ray'
+int sphere_intersect(__global t_primitive *p, ray *ray, float *dist)
+                                              ^
+<program source>:33:30: error: no member named 'center' in 'struct s_primitive'
+        float4 v = ray->origin - p->center;                                                            
+                          ~  ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:37:5: warning: no previous prototype for function 'sphere_intersect'
+int sphere_intersect(__global t_primitive *p, t_ray *ray, float *dist)
+    ^
+<program source>:39:30: error: no member named 'center' in 'struct s_primitive'
+        float4 v = ray->origin - p->center;                                                            
+                          ~  ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:37:5: warning: no previous prototype for function 'sphere_intersect'
+int sphere_intersect(__global t_primitive *p, t_ray *ray, float *dist)
+    ^
+<program source>:39:30: error: no member named 'center' in 'struct s_primitive'
+        float4 v = ray->origin - p->center;                                                            
+                          ~  ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:41:30: error: no member named 'pos' in 'struct s_primitive'
+        float4 v = ray->origin - p->pos;                                                               
+                          ~  ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:92:8: error: no matching function for call to 'normalize'
+        ray = normalize(ray);
+       ^~~~~~~~~
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/A/lib/clang/3.5/include/cl_kernel.h:5029:21: note: candidate function not viable: no known conversion from 't_ray' (aka 'struct s_ray') to 'float' for 1st argument
+__CLFN_FD_1FD_MODD4(normalize);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/A/lib/clang/3.5/include/cl_kernel.h:524:54: note: expanded from macro '__CLFN_FD_1FD_MODD4'
+#define __CLFN_FD_1FD_MODD4(name) float __OVERLOAD__ name(float x); \
+                                                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/A/lib/clang/3.5/include/cl_kernel.h:5029:21: note: candidate function not viable: no known conversion from 't_ray' (aka 'struct s_ray') to '__float2' for 1st argument
+__CLFN_FD_1FD_MODD4(normalize);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/A/lib/clang/3.5/include/cl_kernel.h:525:21: note: expanded from macro '__CLFN_FD_1FD_MODD4'
+float2 __OVERLOAD__ name(float2 x); \
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/A/lib/clang/3.5/include/cl_kernel.h:5029:21: note: candidate function not viable: no known conversion from 't_ray' (aka 'struct s_ray') to '__float3' for 1st argument
+__CLFN_FD_1FD_MODD4(normalize);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/A/lib/clang/3.5/include/cl_kernel.h:526:21: note: expanded from macro '__CLFN_FD_1FD_MODD4'
+float3 __OVERLOAD__ name(float3 x); \
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/A/lib/clang/3.5/include/cl_kernel.h:5029:21: note: candidate function not viable: no known conversion from 't_ray' (aka 'struct s_ray') to '__float4' for 1st argument
+__CLFN_FD_1FD_MODD4(normalize);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/A/lib/clang/3.5/include/cl_kernel.h:527:21: note: expanded from macro '__CLFN_FD_1FD_MODD4'
+float4 __OVERLOAD__ name(float4 x); \
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/A/lib/clang/3.5/include/cl_kernel.h:5029:21: note: candidate function not viable: no known conversion from 't_ray' (aka 'struct s_ray') to 'double' for 1st argument
+__CLFN_FD_1FD_MODD4(normalize);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/A/lib/clang/3.5/include/cl_kernel.h:528:21: note: expanded from macro '__CLFN_FD_1FD_MODD4'
+double __OVERLOAD__ name(double x); \
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/A/lib/clang/3.5/include/cl_kernel.h:5029:21: note: candidate function not viable: no known conversion from 't_ray' (aka 'struct s_ray') to '__double2' for 1st argument
+__CLFN_FD_1FD_MODD4(normalize);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/A/lib/clang/3.5/include/cl_kernel.h:529:22: note: expanded from macro '__CLFN_FD_1FD_MODD4'
+double2 __OVERLOAD__ name(double2 x); \
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/A/lib/clang/3.5/include/cl_kernel.h:5029:21: note: candidate function not viable: no known conversion from 't_ray' (aka 'struct s_ray') to '__double3' for 1st argument
+__CLFN_FD_1FD_MODD4(normalize);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/A/lib/clang/3.5/include/cl_kernel.h:530:22: note: expanded from macro '__CLFN_FD_1FD_MODD4'
+double3 __OVERLOAD__ name(double3 x); \
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/A/lib/clang/3.5/include/cl_kernel.h:5029:21: note: candidate function not viable: no known conversion from 't_ray' (aka 'struct s_ray') to '__double4' for 1st argument
+__CLFN_FD_1FD_MODD4(normalize);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/A/lib/clang/3.5/include/cl_kernel.h:531:22: note: expanded from macro '__CLFN_FD_1FD_MODD4'
+double4 __OVERLOAD__ name(double4 x);
+                     ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+[ft_error] - kernel arg can't be created or is already set
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:41:16: error: member reference type 't_ray' (aka 'struct s_ray') is not a pointer; maybe you meant to use '.'?
+        float4 v = ray->origin - p->position;                                                          
+            ~~~^~
+               .
+<program source>:42:23: error: member reference type 't_ray' (aka 'struct s_ray') is not a pointer; maybe you meant to use '.'?
+        float b = -dot(v, ray->direction );                                                                                                         
+                   ~~~^~
+                      .
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:95:42: error: too few arguments to function call, expected 4, have 3
+        if (sphere_intersect(objects, ray, &dist) == 0)
+     ~~~~~~~~~~~~~~~~                    ^
+<program source>:39:1: note: 'sphere_intersect' declared here
+int sphere_intersect(__global t_primitive *p, t_ray ray, float *dist, int i)
+^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:49:20: error: invalid operands to binary expression ('float' and 'float')
+        ray.x = (float) i % argn->screen_size.x - argn->screen_size.x / 2;
+         ~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~
+<program source>:80:3: error: use of undeclared identifier 'x'
+                x == 500 && y == 500 ? printf("delta = %f\n",scal) : 0;
+  ^
+<program source>:80:15: error: use of undeclared identifier 'y'
+                x == 500 && y == 500 ? printf("delta = %f\n",scal) : 0;
+              ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:80:3: error: use of undeclared identifier 'x'
+                x == 500 && y == 500 ? printf("delta = %f\n",scal) : 0;
+  ^
+<program source>:80:15: error: use of undeclared identifier 'y'
+                x == 500 && y == 500 ? printf("delta = %f\n",scal) : 0;
+              ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:61:10: warning: unused variable 'tmp_r'
+                float4 tmp_r = (float4)(0,0,0,0);
+         ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:61:10: warning: unused variable 'tmp_r'
+                float4 tmp_r = (float4)(0,0,0,0);
+         ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:61:10: warning: unused variable 'tmp_r'
+                float4 tmp_r = (float4)(0,0,0,0);
+         ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:61:10: warning: unused variable 'tmp_r'
+                float4 tmp_r = (float4)(0,0,0,0);
+         ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:61:10: warning: unused variable 'tmp_r'
+                float4 tmp_r = (float4)(0,0,0,0);
+         ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:61:10: warning: unused variable 'tmp_r'
+                float4 tmp_r = (float4)(0,0,0,0);
+         ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:61:10: warning: unused variable 'tmp_r'
+                float4 tmp_r = (float4)(0,0,0,0);
+         ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:61:10: warning: unused variable 'tmp_r'
+                float4 tmp_r = (float4)(0,0,0,0);
+         ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:61:10: warning: unused variable 'tmp_r'
+                float4 tmp_r = (float4)(0,0,0,0);
+         ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:61:10: warning: unused variable 'tmp_r'
+                float4 tmp_r = (float4)(0,0,0,0);
+         ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:61:10: warning: unused variable 'tmp_r'
+                float4 tmp_r = (float4)(0,0,0,0);
+         ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:61:10: warning: unused variable 'tmp_r'
+                float4 tmp_r = (float4)(0,0,0,0);
+         ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
