@@ -34,45 +34,6 @@ typedef struct	s_ray
 
 //j'aime les commentaires, et vous? :p
 
-int sphere_intersect(__global t_primitive *p, t_ray ray, float *dist, int i);
-
-int sphere_intersect(__global t_primitive *p, t_ray ray, float *dist, int i)
-{
-	float4 v = ray.origin - p->position;		//centrage du rayon sur la sphere (coordonnees)
-	float b = -dot(v, ray.direction );	//produit scalaire entre le rayon temporaire et la direction dudit rayon (renvoit un ecart scalaire)
-	//float l = length(v);				//calcule la longeur (#pythagore) du vecteur en prevision du carre suivant
-	float det = (b * b) - dot(v, v) + (p->radius * p->radius); //calcul du determinant
-	int retval = 0;
-	if (i == 0)
-//	printf("%v4f\tintersect\n", ray.direction);
-	if (det >= 0)
-	{
-		det = sqrt(det);
-		float i1 = b - det;
-		float i2 = b + det;
-		if (i2 > 0)
-		{
-			if (i1 < 0)
-			{
-				if (i2 < *dist)
-				{
-					*dist = i2;
-					retval = -1;
-				}
-			}
-			else
-			{
-				if (i1 < *dist)
-				{
-					*dist = i1;
-					retval = 1;
-				}
-			}
-		}
-	}
-	return retval;
-}
-
 __kernel void	example(							//main kernel, called for each ray
 					__global int *out,				//int bitmap, his size is equal to screen_size.x * screen_size.y
 					__global t_argn *argn,			//structure containing important info on how to acces out, rays and objects
@@ -84,24 +45,47 @@ __kernel void	example(							//main kernel, called for each ray
 
 	if (i >= (size_t)argn->screen_size.x * (size_t)argn->screen_size.y)	//the number of kernel executed can overflow the number initialy needed, this is a simple protection to avoid bad memory acces
 		return ;
-
-	size_t x = i % argn->screen_size.x;
-	size_t y = i / argn->screen_size.x;
-	float	dist = MAXFLOAT;
-	t_ray ray = {cam->pos,
-		(float4)((float)argn->screen_size.x / 2.0f + (float)x,
-				(float)-argn->screen_size.y / 2.0f + (float)y , 0, 0)};
-	ray.direction = normalize(ray.direction);
-	if (sphere_intersect(objects, ray, &dist, i) == 1)
+	float4 ray = (float4)(0, 0, 0, 0);
+	ray.x = (i % argn->screen_size.x) - (argn->screen_size.x / 2.0f);
+	ray.y = (i / argn->screen_size.x) - (argn->screen_size.y / 2.0f);
+	ray.z = 800;
+	ray = normalize(ray);
+	float c = objects[0].position.x * objects[0].position.x + objects[0].position.y * objects[0].position.y + objects[0].position.z * objects[0].position.z - objects[0].radius * objects[0].radius;
+	float a = ray.x * ray.x + ray.y * ray.y + ray.z * ray.z;
+	float b = -2 * (ray.x * objects[0].position.x + ray.y * objects[0].position.y + ray.z * objects[0].position.z);
+	float delta = b * b - 4 * a * c;
+	if (delta >= 0)
 	{
-		if (i == 0)
-		printf("%v4f\tintersect\n", ray.direction);
-		out[i] = 0x00FF0000;
+		float4 norm = (float4)(0,0,0,0);
+		float4 tmp_l = (float4)(0,0,0,0);
+		float4 tmp_r = (float4)(0,0,0,0);
+		float x1 = (-b + sqrt(delta)) / (2 * a);
+		float cx = ray.x * x1;
+		float cy = ray.y * x1;
+		float cz = ray.z * x1;
+		if (i == 500 + 500 * 1000)
+			printf("%f\n", cx);
+		norm.x = cx - objects[0].position.x;
+		norm.y = cy - objects[0].position.y;
+		norm.z = cz - objects[0].position.z;
+		norm = normalize(norm);
+		tmp_l.x = objects[1].position.x - cx;
+		tmp_l.y = objects[1].position.y - cy;
+		tmp_l.z = objects[1].position.z - cz;
+		float scal = dot(ray, norm);
+		tmp_r.x = ray.x - 2 * scal * norm.x;
+		tmp_r.y = ray.y - 2 * scal * norm.y;
+		tmp_r.z = ray.z - 2 * scal * norm.z;
+		tmp_l = normalize(tmp_l);
+		//tmp_r = normalize(tmp_r);
+		scal = dot(tmp_l, tmp_r);
+		if (i == 500 + 500 * 1000)
+			printf("%f\n", scal);
+		scal < 0 ? out[i] = 0xaa * -scal : 0 ;
+		out[i] += 0x55;
+		if (i == 500 + 500 * 1000)
+			printf("%v4f\n", tmp_l);
 	}
-	else
-	{
-		if (i == 0)
-		printf("%v4f\tmiss\n", ray.direction);
-		out[i] = 0;
-	}
+		if (i == 500 + 500 * 1000)
+			out[i] = 0xffffff;
 }

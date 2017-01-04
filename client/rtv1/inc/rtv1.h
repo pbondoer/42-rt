@@ -19,8 +19,8 @@
 
 # define OCL_SOURCE_PATH "./scl/test.cl"
 
-# define SW 500
-# define SH 500
+# define SW 1000
+# define SH 1000
 
 typedef enum	e_prim_type
 {

@@ -44,13 +44,21 @@ int			cam_key(int key, int status, void *data)
 	if (status != FTX_KEY_STATUS_PRESSED)
 		return (0);
 	if (key == KEY_W)
-		cam()->pos.z += 100;
+		prim()[0][0].position.y += 10; 
+	if (key == KEY_Q)
+		prim()[0][0].position.z += 10; 
+	if (key == KEY_E)
+		prim()[0][0].position.z -= 10; 
+		//cam()->pos.z += 100;
 	if (key == KEY_S)
-		cam()->pos.z -= 100;
+		prim()[0][0].position.y -= 10; 
+		//cam()->pos.z -= 100;
 	if (key == KEY_D)
-		cam()->pos.x += 100;
+		prim()[0][0].position.x -= 10; 
+	//	cam()->pos.x += 100;
 	if (key == KEY_A)
-		cam()->pos.x -= 100;
+		prim()[0][0].position.x += 10; 
+	//	cam()->pos.x -= 100;
 	if (key == KEY_SPACE)
 		cam()->pos.y += 100;
 	if (key == KEY_SHIFT_LEFT)
@@ -71,8 +79,8 @@ int			cam_key(int key, int status, void *data)
 void		keys(void)
 {
 	ftx_key_hook(KEY_W, cam_key, NULL);
-	ftx_key_hook(KEY_S, cam_key, NULL);
 	ftx_key_hook(KEY_A, cam_key, NULL);
+	ftx_key_hook(KEY_S, cam_key, NULL);
 	ftx_key_hook(KEY_D, cam_key, NULL);
 	ftx_key_hook(KEY_Q, cam_key, NULL);
 	ftx_key_hook(KEY_E, cam_key, NULL);
@@ -86,9 +94,10 @@ void		rtv1(void)
 	cl_event	event;
 
 	argn()->screen_size = (cl_int2){.x = SW, .y = SH};
-	argn()->nb_objects = 1;
+	argn()->nb_objects = 2;
 	*prim() = (t_primitive*)ft_malloc(sizeof(t_primitive) * argn()->nb_objects);
-	**prim() = sphere((cl_float4){.x = 0, .y = 0, .z = 0, .w = 0}, 1, 0xFF0000);
+	prim()[0][0] = sphere((cl_float4){.x = 0, .y = 0, .z = -650, .w = 0}, 100, 0x0000FF);
+	prim()[0][1] = sphere((cl_float4){.x = 0, .y = 0, .z = -500, .w = 0}, 0, 0);
 	out.size = ft_point(SW, SH);
 	out.data = (int*)ft_malloc(sizeof(int) * SW * SH);
 	update_kernel_args();
