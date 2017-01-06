@@ -96,7 +96,7 @@ void		rtv1(void)
 	argn()->screen_size = (cl_int2){.x = SW, .y = SH};
 	argn()->nb_objects = 2;
 	*prim() = (t_primitive*)ft_malloc(sizeof(t_primitive) * argn()->nb_objects);
-	prim()[0][0] = sphere((cl_float4){.x = 0, .y = 0, .z = -650, .w = 0}, 100, 0x0000FF);
+	prim()[0][0] = sphere((cl_float4){.x = 120, .y = 0, .z = -500, .w = 0}, 100, 0x0000FF);
 	prim()[0][1] = sphere((cl_float4){.x = 0, .y = 0, .z = -500, .w = 0}, 0, 0);
 	out.size = ft_point(SW, SH);
 	out.data = (int*)ft_malloc(sizeof(int) * SW * SH);

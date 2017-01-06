@@ -63,8 +63,6 @@ __kernel void	example(							//main kernel, called for each ray
 		float cx = ray.x * x1;
 		float cy = ray.y * x1;
 		float cz = ray.z * x1;
-		if (i == 500 + 500 * 1000)
-			printf("%f\n", cx);
 		norm.x = cx - objects[0].position.x;
 		norm.y = cy - objects[0].position.y;
 		norm.z = cz - objects[0].position.z;
@@ -77,14 +75,14 @@ __kernel void	example(							//main kernel, called for each ray
 		tmp_r.y = ray.y - 2 * scal * norm.y;
 		tmp_r.z = ray.z - 2 * scal * norm.z;
 		tmp_l = normalize(tmp_l);
-		//tmp_r = normalize(tmp_r);
-		scal = dot(tmp_l, tmp_r);
-		if (i == 500 + 500 * 1000)
+		tmp_r = normalize(tmp_r);
+		scal = dot(tmp_l, norm);
+		if (i == 200 + 500 * 1000)
 			printf("%f\n", scal);
-		scal < 0 ? out[i] = 0xaa * -scal : 0 ;
-		out[i] += 0x55;
-		if (i == 500 + 500 * 1000)
-			printf("%v4f\n", tmp_l);
+		scal >= 0 ? out[i] = 0xcc * scal : 0;
+		out[i] += 0x22;
+		//if (i == 500 + 500 * 1000)
+			//printf("%v4f\n", tmp_l);
 	}
 		if (i == 500 + 500 * 1000)
 			out[i] = 0xffffff;
