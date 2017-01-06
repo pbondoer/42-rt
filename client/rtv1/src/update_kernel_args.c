@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/03 14:38:52 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/03 17:53:03 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/06 17:42:46 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ void		update_kernel_args(void)
 	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 2, sizeof(t_primitive) *
 		argn()->nb_objects, (void*)*prim());
 	ftocl_clear_current_kernel_arg(3);
-	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 3, sizeof(t_camera),
+	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 3, sizeof(t_primitive) *
+		argn()->nb_objects, (void*)*lights());
+	ftocl_clear_current_kernel_arg(4);
+	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 4, sizeof(t_camera),
 								(void*)cam());
 }
