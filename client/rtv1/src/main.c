@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/09 09:15:54 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/04 19:12:59 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/06 18:11:36 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,29 @@ int			cb_exit(int k, int s, void *p)
 	return (0);
 }
 
-t_primitive	sphere(cl_float4 pos, cl_float radius, cl_int color)
+t_light	**lights(void)
+{
+	static t_light	*data = NULL;
+
+	return (&data);
+}
+
+t_primitive	sphere(cl_float4 pos, cl_float radius, cl_float4 color)
 {
 	return ((t_primitive){.type = SPHERE, .position = pos,
 		.normal = {.x = 0, .y = 0, .z = 1, .w = 0}, .radius = radius,
 		.color = color});
 }
 
-t_primitive	plane(cl_float4 pos, cl_float4 norm, cl_int color)
+t_primitive	plane(cl_float4 pos, cl_float4 norm, cl_float4 color)
 {
-	return ((t_primitive){.type = SPHERE, .position = pos,
+	return ((t_primitive){.type = PLANE, .position = pos,
 		.normal = norm, .radius = 0, .color = color});
+}
+
+t_light		light(cl_float4 pos, cl_float4 color)
+{
+	return ((t_light){.position = pos, .color = color});
 }
 
 #include <stdio.h>
@@ -44,29 +56,27 @@ int			cam_key(int key, int status, void *data)
 	if (status != FTX_KEY_STATUS_PRESSED)
 		return (0);
 	if (key == KEY_W)
-		prim()[0][0].position.y += 10; 
+		prim()[0][0].position.y += 10;
 	if (key == KEY_Q)
-		prim()[0][0].position.z += 10; 
+		prim()[0][0].position.z += 10;
 	if (key == KEY_E)
-		prim()[0][0].position.z -= 10; 
-		//cam()->pos.z += 100;
+		prim()[0][0].position.z -= 10;
 	if (key == KEY_S)
-		prim()[0][0].position.y -= 10; 
-		//cam()->pos.z -= 100;
+		prim()[0][0].position.y -= 10;
 	if (key == KEY_D)
-		prim()[0][0].position.x -= 10; 
-	//	cam()->pos.x += 100;
+		prim()[0][0].position.x -= 10;
 	if (key == KEY_A)
-		prim()[0][0].position.x += 10; 
-	//	cam()->pos.x -= 100;
-	if (key == KEY_SPACE)
-		cam()->pos.y += 100;
-	if (key == KEY_SHIFT_LEFT)
-		cam()->pos.y -= 100;
-	printf("%f, %f, %f\n", cam()->pos.x, cam()->pos.y, cam()->pos.z);
+		prim()[0][0].position.x += 10;
+	//if (key == KEY_SPACE)
+	//	cam()->pos.y += 100;
+	//if (key == KEY_SHIFT_LEFT)
+	//	cam()->pos.y -= 100;
 	out.size = ft_point(SW, SH);
-	out.data = (int*)ft_malloc(sizeof(int) * SW * SH);
-	update_kernel_args();
+	out.data = (int*)ft_memalloc(sizeof(int) * SW * SH);
+//	update_kernel_args();
+	ftocl_clear_current_kernel_arg(2);
+	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 2, sizeof(t_primitive) *
+		argn()->nb_objects, (void*)*prim());
 	ftocl_start_current_kernel(1, (const size_t[1]){SW * SH}, NULL);
 	ftocl_read_current_kernel_arg(0, out.data);
 	ftx_fill_image(ftx_data()->focused_window->vbuffer, 0x00FFFF, 1);
@@ -84,8 +94,8 @@ void		keys(void)
 	ftx_key_hook(KEY_D, cam_key, NULL);
 	ftx_key_hook(KEY_Q, cam_key, NULL);
 	ftx_key_hook(KEY_E, cam_key, NULL);
-	ftx_key_hook(KEY_SPACE, cam_key, NULL);
-	ftx_key_hook(KEY_SHIFT_LEFT, cam_key, NULL);
+//	ftx_key_hook(KEY_SPACE, cam_key, NULL);
+//	ftx_key_hook(KEY_SHIFT_LEFT, cam_key, NULL);
 }
 
 void		rtv1(void)
@@ -94,11 +104,13 @@ void		rtv1(void)
 	cl_event	event;
 
 	argn()->screen_size = (cl_int2){.x = SW, .y = SH};
-	argn()->nb_objects = 3;
+	argn()->nb_objects = 1;
+	argn()->nb_lights = 2;
 	*prim() = (t_primitive*)ft_malloc(sizeof(t_primitive) * argn()->nb_objects);
-	prim()[0][0] = sphere((cl_float4){.x = 120, .y = 0, .z = -500, .w = 0}, 100, 0x0000FF);
-	prim()[0][1] = sphere((cl_float4){.x = 0, .y = 0, .z = -500, .w = 0}, 0, 0);
-	prim()[0][2] = sphere((cl_float4){.x = 100, .y = 200, .z = -500, .w = 0}, 0, 0);
+	*lights() = (t_light*)ft_malloc(sizeof(t_light) * argn()->nb_lights);
+	prim()[0][0] = sphere((cl_float4){.x = 120, .y = 0, .z = -500, .w = 0}, 100, (cl_float4){.x = 0, .y = 0, .z = 1, .w = 0});
+	lights()[0][0] = light((cl_float4){.x = 0, .y = 0, .z = -500, .w = 0},  (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
+	lights()[0][1] = light((cl_float4){.x = 100, .y = 200, .z = -500, .w = 0}, (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
 	out.size = ft_point(SW, SH);
 	out.data = (int*)ft_malloc(sizeof(int) * SW * SH);
 	update_kernel_args();
