@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/15 00:05:50 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/06 18:29:49 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/07 16:02:36 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,9 @@ typedef struct	s_camera
 	cl_float4		dir;
 	cl_float4		up;
 	cl_float4		right;
+	cl_float4		vpul;
+	cl_int2			vp_size;
+	float			dist;
 	t_quaternion	orientation;
 }				t_camera;
 

@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 11:11:43 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/04 18:51:31 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/07 19:39:15 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,6 +124,7 @@ struct						s_ftx_data
 	t_2list				*images;
 	t_window			*focused_window;
 	unsigned int		tick;
+	int					(*loop_callback)(t_ftx_data *data);
 	t_key_data			keymap[KEYMAP_SIZE];
 };
 
@@ -340,4 +341,7 @@ int							*ftx_button_status(int button);
 t_image						*ftx_set_cursor(t_image *img, int x, int y);
 t_image						*ftx_put_ubmp_img(t_image *out, const t_point pos,
 												const t_ubmp *img, int mask);
+
+int							ftx_loop_hook(
+										int (*loop_callback)(t_ftx_data *data));
 #endif

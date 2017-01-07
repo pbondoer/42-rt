@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/09 09:15:54 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/06 18:11:36 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/07 20:28:31 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 int			cb_exit(int k, int s, void *p)
 {
 	(void)k;
-	(void)s;
 	(void)p;
-	ft_end(0);
+	if (s == FTX_KEY_STATUS_PRESSED)
+		ft_end(0);
 	return (0);
 }
 
@@ -48,6 +48,23 @@ t_light		light(cl_float4 pos, cl_float4 color)
 
 #include <stdio.h>
 
+void		calc_vpul(void)
+{
+	float	y;
+	float	x;
+
+	y = ((float)cam()->vp_size.y / 2.0f);
+	x = -((float)cam()->vp_size.x / 2.0f);
+	cam()->vpul.x = ((cam()->dir.x * cam()->dist) +
+					(cam()->up.x * y)) + (cam()->right.x * x);
+	cam()->vpul.y = ((cam()->dir.y * cam()->dist) +
+					(cam()->up.y * y)) + (cam()->right.y * x);
+	cam()->vpul.z = ((cam()->dir.z * cam()->dist) +
+					(cam()->up.z * y)) + (cam()->right.z * x);
+	cam()->vpul.w = 0.0f;
+}
+
+/*
 int			cam_key(int key, int status, void *data)
 {
 	t_ubmp		out;
@@ -73,7 +90,6 @@ int			cam_key(int key, int status, void *data)
 	//	cam()->pos.y -= 100;
 	out.size = ft_point(SW, SH);
 	out.data = (int*)ft_memalloc(sizeof(int) * SW * SH);
-//	update_kernel_args();
 	ftocl_clear_current_kernel_arg(2);
 	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 2, sizeof(t_primitive) *
 		argn()->nb_objects, (void*)*prim());
@@ -85,7 +101,9 @@ int			cam_key(int key, int status, void *data)
 	ftx_refresh_window(ftx_data()->focused_window);
 	return (0);
 }
+*/
 
+/*
 void		keys(void)
 {
 	ftx_key_hook(KEY_W, cam_key, NULL);
@@ -97,6 +115,40 @@ void		keys(void)
 //	ftx_key_hook(KEY_SPACE, cam_key, NULL);
 //	ftx_key_hook(KEY_SHIFT_LEFT, cam_key, NULL);
 }
+*/
+
+int			keys(t_ftx_data *data)
+{
+	t_ubmp		out;
+
+//	printf("pomf\n");
+	(void)data;
+	if (data->keymap[KEY_W].status == FTX_KEY_STATUS_PRESSED)
+		prim()[0][0].position.y += 10;
+	if (data->keymap[KEY_S].status == FTX_KEY_STATUS_PRESSED)
+		prim()[0][0].position.y -= 10;
+	if (data->keymap[KEY_D].status == FTX_KEY_STATUS_PRESSED)
+		prim()[0][0].position.x += 10;
+	if (data->keymap[KEY_A].status == FTX_KEY_STATUS_PRESSED)
+		prim()[0][0].position.x -= 10;
+	if (data->keymap[KEY_Q].status == FTX_KEY_STATUS_PRESSED)
+		prim()[0][0].position.z += 10;
+	if (data->keymap[KEY_E].status == FTX_KEY_STATUS_PRESSED)
+		prim()[0][0].position.z -= 10;
+	out.size = ft_point(SW, SH);
+	out.data = (int*)ft_memalloc(sizeof(int) * SW * SH);
+	ftocl_clear_current_kernel_arg(2);
+	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 2, sizeof(t_primitive) *
+		argn()->nb_objects, (void*)*prim());
+	ftocl_start_current_kernel(1, (const size_t[1]){SW * SH}, NULL);
+	ftocl_read_current_kernel_arg(0, out.data);
+	ftx_fill_image(ftx_data()->focused_window->vbuffer, 0x00FFFF, 1);
+	ftx_put_ubmp_img(ftx_data()->focused_window->vbuffer, ft_point(0, 0), &out,
+					NOMASK);
+	ftx_refresh_window(ftx_data()->focused_window);
+
+	return (0);
+}
 
 void		rtv1(void)
 {
@@ -105,12 +157,17 @@ void		rtv1(void)
 
 	argn()->screen_size = (cl_int2){.x = SW, .y = SH};
 	argn()->nb_objects = 1;
-	argn()->nb_lights = 2;
+	argn()->nb_lights = 3;
 	*prim() = (t_primitive*)ft_malloc(sizeof(t_primitive) * argn()->nb_objects);
 	*lights() = (t_light*)ft_malloc(sizeof(t_light) * argn()->nb_lights);
-	prim()[0][0] = sphere((cl_float4){.x = 120, .y = 0, .z = -500, .w = 0}, 100, (cl_float4){.x = 0, .y = 0, .z = 1, .w = 0});
-	lights()[0][0] = light((cl_float4){.x = 0, .y = 0, .z = -500, .w = 0},  (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
-	lights()[0][1] = light((cl_float4){.x = 100, .y = 200, .z = -500, .w = 0}, (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
+	prim()[0][0] = sphere((cl_float4){.x = 120, .y = 0, .z = 500, .w = 0}, 100, (cl_float4){.x = 0, .y = 0, .z = 1, .w = 0});
+	lights()[0][0] = light((cl_float4){.x = 0, .y = 0, .z = 500, .w = 0},  (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
+	lights()[0][1] = light((cl_float4){.x = 100, .y = 200, .z = 500, .w = 0}, (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
+	cam()->pos = (cl_float4){.x = 0, .y = 0, .z = 0, .w = 0};
+	lights()[0][2] = light((cl_float4){.x = 0, .y = 0, .z = 0, .w = 0}, (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
+	cam()->vp_size = (cl_int2){.x = SW, .y = SH};
+	cam()->dist = 800;
+	calc_vpul();
 	out.size = ft_point(SW, SH);
 	out.data = (int*)ft_malloc(sizeof(int) * SW * SH);
 	update_kernel_args();
@@ -124,7 +181,8 @@ void		rtv1(void)
 	printf("Kernel: %.8s was succesfully loaded\n",
 				(char*)&ftocl_data()->current_kernel->id);
 	ftx_key_hook(KEY_EXIT, cb_exit, NULL);
-	keys();
+	//keys();
+	ftx_loop_hook(&keys);
 	ftx_set_cursor(ftx_data()->focused_window->vbuffer, 10, 10);
 	ftx_write(ftx_data()->focused_window->vbuffer, "thing\ntruc", 10, 0xFFFFFF);
 	ftx_refresh_window(ftx_data()->focused_window);

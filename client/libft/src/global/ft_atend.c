@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/27 16:02:50 by hmartzol          #+#    #+#             */
-/*   Updated: 2016/12/27 16:53:14 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/07 18:38:56 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 ** of FT_GLOBAL_ATEND_STACK_SIZE in libft.h
 */
 
-int	ft_atend(void (*func)())
+int	ft_atend(void (*func)(void))
 {
 	if (ft_pile_push(ft_global_atend_stack(), func) == NULL)
 		return (-1 + (int)ft_error(ENOMEM, "ft_atend stacking call failed: "));

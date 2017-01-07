@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 14:39:36 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/03 12:50:41 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/07 18:40:00 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1244,7 +1244,7 @@ t_pile					*ft_global_malloc_stack(void);
 void					ft_final_free(void);
 void					**ft_tab_block_alloc(size_t x, size_t y, size_t block);
 t_pile					*ft_global_atend_stack(void);
-int						ft_atend(void (*func)());
+int						ft_atend(void (*func)(void));
 uint64_t				ft_str_to_id64(char *str);
 
 #endif

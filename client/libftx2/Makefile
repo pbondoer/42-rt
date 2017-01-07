@@ -39,7 +39,8 @@ ITEMS = \
 		window/ftx_new_window \
 		window/ftx_refresh_window \
 		window/ftx_screenshoot \
-		image/ftx_put_ubmp_img
+		image/ftx_put_ubmp_img \
+		ftx_loop_hook
 
 #variables for Linux
 ifeq ($(shell uname),Linux)

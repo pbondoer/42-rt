@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/15 00:13:03 by hmartzol          #+#    #+#             */
-/*   Updated: 2016/12/17 23:52:56 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/07 17:27:08 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ char	*ft_str_clear_commentaries(char *str)
 						str[-2] = ' ';
 				if (str[-1] != '\n')
 					str[-1] = ' ';
+				if (*str == '/')
+					*str = ' ';
 			}
 		}
 	return (out);

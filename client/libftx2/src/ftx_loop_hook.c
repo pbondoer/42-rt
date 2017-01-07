@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cam.c                                              :+:      :+:    :+:   */
+/*   ftx_loop_hook.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/03 14:37:45 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/07 18:23:44 by hmartzol         ###   ########.fr       */
+/*   Created: 2017/01/07 19:30:22 by hmartzol          #+#    #+#             */
+/*   Updated: 2017/01/07 19:55:25 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rtv1.h>
+#include <libft.h>
+#include <libftx.h>
 
-t_camera	*cam(void)
+int	ftx_loop_hook(int (*loop_callback)(t_ftx_data *data))
 {
-	static t_camera	cam = {
-
-	.pos = {.x = 0, .y = 0, .z = 0, .w = 0},
-	.dir = {.x = 0, .y = 0, .z = 1, .w = 0},
-	.up = {.x = 0, .y = 1, .z = 0, .w = 0},
-	.right = {.x = 1, .y = 0, .z = 0, .w = 0},
-	.vpul = {.x = 0, .y = 0, .z = 0, .w = 0},
-	.vp_size = {.x = 0, .y = 0},
-	.dist = 0,
-	.orientation = {.r = 1, .i = 0, .j = 0, .k = 0}};
-	return (&cam);
+	if (ftx_data() == NULL)
+		return (-1);
+	if (ftx_data()->loop_callback != NULL)
+		return (1);
+	ftx_data()->loop_callback = loop_callback;
+	return (0);
 }

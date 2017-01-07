@@ -1148,3 +1148,342 @@ Log ended
 New log started
 Initializing OpenCL environement...
 Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:105:66: error: too many arguments to function call, expected 5, have 6
+                fcolor += calcul_lum(colision, norm, lights[j], argn, objects, ray.origin);
+            ~~~~~~~~~~                                           ^~~~~~~~~~
+<program source>:51:1: note: 'calcul_lum' declared here
+float4  calcul_lum(float4 colision, float4 norm, t_light light, __global t_argn *argn, __global t_primitive *objects)
+^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/A/lib/clang/3.5/include/cl_kernel.h:133:18: note: expanded from macro 'float4'
+#define float4                  __float4
+                 ^
+<program source>:135:34: error: passing '__float4' to parameter of incompatible type 't_ray' (aka 'struct s_ray')
+        if (dist_colision_sphere(&dist, ray, objects))
+                                 ^~~
+<program source>:67:46: note: passing argument to parameter 'ray' here
+int             dist_colision_sphere(float      *dist, t_ray ray, t_primitive sphr)
+                                             ^
+<program source>:137:28: error: passing '__float4' to parameter of incompatible type 't_ray' (aka 'struct s_ray')
+                out[i] = colision_sphere(ray, dist, objects, argn, lights);
+                           ^~~
+<program source>:98:28: note: passing argument to parameter 'ray' here
+int             colision_sphere(t_ray ray, float dist, __global t_primitive *objects, __global t_argn *argn, __global t_light *lights)
+                           ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:135:34: error: passing '__float4' to parameter of incompatible type 't_ray' (aka 'struct s_ray')
+        if (dist_colision_sphere(&dist, ray, objects))
+                                 ^~~
+<program source>:67:46: note: passing argument to parameter 'ray' here
+int             dist_colision_sphere(float      *dist, t_ray ray, t_primitive sphr)
+                                             ^
+<program source>:137:28: error: passing '__float4' to parameter of incompatible type 't_ray' (aka 'struct s_ray')
+                out[i] = colision_sphere(ray, dist, objects, argn, lights);
+                           ^~~
+<program source>:98:28: note: passing argument to parameter 'ray' here
+int             colision_sphere(t_ray ray, float dist, __global t_primitive *objects, __global t_argn *argn, __global t_light *lights)
+                           ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:170:34: error: passing '__float4' to parameter of incompatible type 't_ray' (aka 'struct s_ray')
+        if (dist_colision_sphere(&dist, ray, objects))
+                                 ^~~
+<program source>:67:46: note: passing argument to parameter 'ray' here
+int             dist_colision_sphere(float      *dist, t_ray ray, t_primitive sphr)
+                                             ^
+<program source>:172:28: error: passing '__float4' to parameter of incompatible type 't_ray' (aka 'struct s_ray')
+                out[i] = colision_sphere(ray, dist, objects, argn, lights);
+                           ^~~
+<program source>:98:28: note: passing argument to parameter 'ray' here
+int             colision_sphere(t_ray ray, float dist, __global t_primitive *objects, __global t_argn *argn, __global t_light *lights)
+                           ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:181:2: error: expected identifier or '('
+ /
+ ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:123:86: error: expected expression
+        float   x = (float)(i % argn->screen_size.x)                                         /;
+                                                                                     ^
+<program source>:124:86: error: expected expression
+        float   y = (float)(i / argn->screen_size.x)                                         /;
+                                                                                     ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:83:10: error: assigning to 'float *' from incompatible type 'float'; take the address with &
+                                dist = x2;
+         ^ ~~
+           &
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended

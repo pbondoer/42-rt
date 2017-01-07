@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/22 20:14:49 by hmartzol          #+#    #+#             */
-/*   Updated: 2016/12/27 16:53:30 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/07 18:39:33 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static inline void	sf_endcalls(void)
 {
-	void	(*func)();
+	void	(*func)(void);
 	t_pile	*stack;
 
 	stack = ft_global_atend_stack();
