@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/09 09:15:54 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/07 20:28:31 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/08 13:59:39 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,7 +121,6 @@ int			keys(t_ftx_data *data)
 {
 	t_ubmp		out;
 
-//	printf("pomf\n");
 	(void)data;
 	if (data->keymap[KEY_W].status == FTX_KEY_STATUS_PRESSED)
 		prim()[0][0].position.y += 10;

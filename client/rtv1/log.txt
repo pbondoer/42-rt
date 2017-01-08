@@ -1487,3 +1487,92 @@ Log ended
 New log started
 Initializing OpenCL environement...
 Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (-2)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1021c00 (AMD Radeon R9 M380 Compute Engine) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:91:6: error: conflicting types for 'dist_colision_sphere'
+int             dist_colision_sphere(float      *dist, t_ray ray, __global t_primitive *object)
+     ^
+<program source>:48:6: note: previous declaration is here
+int             dist_colision_sphere(float      *dist, t_ray ray, t_primitive sphr);
+     ^
+<program source>:157:39: error: passing '__global t_primitive *' (aka '__global struct s_primitive *') to parameter of incompatible type 't_primitive' (aka 'struct s_primitive')
+        if (dist_colision_sphere(&dist, ray, objects))
+                                      ^~~~~~~
+<program source>:48:63: note: passing argument to parameter 'sphr' here
+int             dist_colision_sphere(float      *dist, t_ray ray, t_primitive sphr);
+                                                              ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (-2)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1021c00 (AMD Radeon R9 M380 Compute Engine) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:84:42: error: passing '__global t_primitive' (aka '__global struct s_primitive') to parameter of incompatible type '__global t_primitive *' (aka '__global struct s_primitive *'); take the address with &
+                if (dist_colision_sphere(&dist, tmp_l, objects[i]))
+                                         ^~~~~~~~~~
+                                         &
+<program source>:48:73: note: passing argument to parameter 'object' here
+int             dist_colision_sphere(float      *dist, t_ray ray, __global t_primitive *object);
+                                                                        ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
