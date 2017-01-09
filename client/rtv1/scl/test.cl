@@ -57,6 +57,7 @@ int		plane_intersect(__global t_primitive *obj, t_ray *ray, float *dist);
 int		sphere_intersect(__global t_primitive *obj, t_ray *ray, float *dist);
 int		intersect(__global t_primitive *obj, t_ray *ray, float *dist);
 float4	get_normal(__global t_primitive *obj, float4 point);
+float4	phong(float4 dir, float4 norm);
 int		color_to_int(float4 color);
 
 #if 0
@@ -161,6 +162,11 @@ float4	get_normal(__global t_primitive *obj, float4 point)
 	return (float4)(0, 0, 0, 0);
 }
 
+float4	phong(float4 dir, float4 norm)
+{
+	return (dir - 2 * DOT(dir, norm) * norm);
+}
+
 int		color_to_int(float4 color)
 {
 	int r = (int)clamp(color.x * 255.0f, 0.0f, 255.0f);
@@ -227,9 +233,9 @@ __kernel void	example(							//main kernel, called for each ray
 				continue ;
 			if ((hit = intersect(&objects[cur], &ray_l, &dist)))
 			{
-				if (dist <= dist_l)
+				if (dist < dist_l) // it is between us
 					break ;
-				else
+				else // it is behind us
 					hit = 0;
 			}
 		}
@@ -241,9 +247,16 @@ __kernel void	example(							//main kernel, called for each ray
 		// get the color for this light
 		float4 norm = get_normal(prim, collision);
 
+		// diffuse lighting
 		float scal;
 		if ((scal = DOT(ray_l.direction, norm)) > 0)
-			color += prim->color * light.color * scal;
+			color += prim->color * light.color * scal; // * diffuse amount;
+
+		// specular highlights (needs pow to make the curve sharper)
+		float4 ir = phong(-ray_l.direction, norm);
+		if (scal > 0 && (scal = DOT(ray_l.direction, ir)) > 0)
+			color += light.color * pow(max(0.0f, scal), 20); // * specular amount;
+
 	}
 
 	// this isnt mathematically correct but is definitely better looking for now
