@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/09 09:15:54 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/08 13:59:39 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/09 04:11:28 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,15 +155,17 @@ void		rtv1(void)
 	cl_event	event;
 
 	argn()->screen_size = (cl_int2){.x = SW, .y = SH};
-	argn()->nb_objects = 1;
+	argn()->nb_objects = 3;
 	argn()->nb_lights = 3;
 	*prim() = (t_primitive*)ft_malloc(sizeof(t_primitive) * argn()->nb_objects);
 	*lights() = (t_light*)ft_malloc(sizeof(t_light) * argn()->nb_lights);
-	prim()[0][0] = sphere((cl_float4){.x = 120, .y = 0, .z = 500, .w = 0}, 100, (cl_float4){.x = 0, .y = 0, .z = 1, .w = 0});
-	lights()[0][0] = light((cl_float4){.x = 0, .y = 0, .z = 500, .w = 0},  (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
-	lights()[0][1] = light((cl_float4){.x = 100, .y = 200, .z = 500, .w = 0}, (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
+	prim()[0][0] = sphere((cl_float4){.x = 150, .y = 0, .z = 500, .w = 0}, 50, (cl_float4){.x = 1, .y = 1, .z = 0, .w = 0});
+	prim()[0][1] = sphere((cl_float4){.x = -150, .y = 0, .z = 500, .w = 0}, 100, (cl_float4){.x = 1, .y = 0, .z = 0, .w = 0});
+	prim()[0][2] = plane((cl_float4){.x = 0, .y = -200, .z = 0, .w = 0}, (cl_float4){.x = 0, .y = 1, .z = 0, .w = 0}, (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
+	lights()[0][0] = light((cl_float4){.x = 0, .y = 0, .z = 0, .w = 0},  (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
+	lights()[0][1] = light((cl_float4){.x = 0, .y = 300, .z = 600, .w = 0}, (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
+	lights()[0][2] = light((cl_float4){.x = 0, .y = 30, .z = 500, .w = 0}, (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
 	cam()->pos = (cl_float4){.x = 0, .y = 0, .z = 0, .w = 0};
-	lights()[0][2] = light((cl_float4){.x = 0, .y = 0, .z = 0, .w = 0}, (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
 	cam()->vp_size = (cl_int2){.x = SW, .y = SH};
 	cam()->dist = 800;
 	calc_vpul();

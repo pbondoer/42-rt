@@ -47,11 +47,17 @@ NOTE HYPER IMPORTANTE:
 pour la compatibilité AMD, il faut continuer d'utiliser les flags __global et les pointeurs
 (AMD ne copie pas les déférencements de pointeurs dans la stack, ce qui fait que les objets et la lumière n'étaient pas envoyé aux calculs)
 */
-float4	calcul_lum(float4 colision, float4 norm, __global t_light *light, __global t_argn *argn, __global t_primitive *objects);
-int		dist_colision_sphere(float	*dist, t_ray ray, __global t_primitive *object);
-int		colision_sphere(t_ray ray, float dist, __global t_primitive *objects, __global t_argn *argn, __global t_light *lights);
+//float4	calcul_lum(float4 colision, float4 norm, __global t_light *light, __global t_argn *argn, __global t_primitive *objects);
+//int		dist_colision_sphere(float	*dist, t_ray ray, __global t_primitive *object);
+//int		colision_sphere(t_ray ray, float dist, __global t_primitive *objects, __global t_argn *argn, __global t_light *lights);
 float4	local_normalize(float4 v);
 float	local_dot(float4 v1, float4 v2);
+
+int		plane_intersect(__global t_primitive *obj, t_ray *ray, float *dist);
+int		sphere_intersect(__global t_primitive *obj, t_ray *ray, float *dist);
+int		intersect(__global t_primitive *obj, t_ray *ray, float *dist);
+float4	get_normal(__global t_primitive *obj, float4 point);
+int		color_to_int(float4 color);
 
 #if 0
 # define DOT local_dot
@@ -75,33 +81,38 @@ float4	local_normalize(float4 v)
 	return (v / sqrt(t));
 }
 
-float4	calcul_lum(float4 colision, float4 norm, __global t_light *light, __global t_argn *argn, __global t_primitive *objects)
+int		plane_intersect(__global t_primitive *obj, t_ray *ray, float *dist)
 {
-	float	dist = 0;
-	t_ray tmp_l;
-	tmp_l.direction = light->position - colision;
-	tmp_l.direction = NORMALIZE(tmp_l.direction);
-	float scal = DOT(tmp_l.direction, norm);
-	for (int i = 0; i < argn->nb_objects; i++)
+	float d = DOT(obj->normal, ray->direction);
+
+	if (d == 0)
+		return (0); // we are facing the plane directly so no collision
+
+	float new_dist = DOT(obj->position - ray->origin, obj->normal) / d;
+
+	if (new_dist > 0 && new_dist < *dist)
 	{
-		if (dist_colision_sphere(&dist, tmp_l, &objects[i]))
-			return (0);
+		*dist = new_dist;
+		return (1);
 	}
-	return (scal >= 0 ? (float4)(0, 0, 0x88 * scal, 0) : (float4)(0, 0, 0, 0));
+	return (0);
 }
 
-
-int		dist_colision_sphere(float	*dist, t_ray ray, __global t_primitive *object)
+int		sphere_intersect(__global t_primitive *obj, t_ray *ray, float *dist)
 {
-	object->position = object->position - ray.origin;
-	float c = object->position.x * object->position.x + object->position.y * object->position.y + object->position.z * object->position.z - object->radius * object->radius;
-	float a = ray.direction.x * ray.direction.x + ray.direction.y * ray.direction.y + ray.direction.z * ray.direction.z;
-	float b = 2 * (ray.direction.x * object->position.x + ray.direction.y * object->position.y + ray.direction.z * object->position.z);
+	float4 pos = obj->position - ray->origin;
+	pos.w = 0;
+
+	float c = pos.x * pos.x + pos.y * pos.y + pos.z * pos.z - obj->radius * obj->radius;
+	float a = ray->direction.x * ray->direction.x + ray->direction.y * ray->direction.y + ray->direction.z * ray->direction.z;
+	float b = 2 * (ray->direction.x * pos.x + ray->direction.y * pos.y + ray->direction.z * pos.z);
 	float delta = b * b - 4 * a * c;
 	if (delta < 0)
 		return (0);
-	float x1 = (b - sqrt(delta)) / (2 * a);
-	float x2 = (b + sqrt(delta)) / (2 * a);
+
+	delta = sqrt(delta);
+	float x1 = (b - delta) / (2 * a);
+	float x2 = (b + delta) / (2 * a);
 	if (x2 > 0)
 	{
 		if (x1 < 0)
@@ -109,7 +120,7 @@ int		dist_colision_sphere(float	*dist, t_ray ray, __global t_primitive *object)
 			if (x2 < *dist)
 			{
 				*dist = x2;
-				return (-1);
+				return (0); // inside the primitive
 			}
 		}
 		else
@@ -124,16 +135,39 @@ int		dist_colision_sphere(float	*dist, t_ray ray, __global t_primitive *object)
 	return (0);
 }
 
-int		colision_sphere(t_ray ray, float dist, __global t_primitive *objects, __global t_argn *argn, __global t_light *lights)
+int		intersect(__global t_primitive *obj, t_ray *ray, float *dist)
 {
-	float4 colision = ray.origin + ray.direction * dist;
-	float4 norm = colision - objects[0].position;
-	norm = NORMALIZE(norm);
-	float4 fcolor = 0;
-	for(int j = 0; j < argn->nb_lights; j++)
-		fcolor += calcul_lum(colision, norm, &lights[j], argn, objects);
-	//printf("okidoki\n");
-	return ((int)fcolor.x * 0x10000 + (int)fcolor.y * 0x100 + (int)fcolor.z);
+	switch (obj->type)
+	{
+		case SPHERE:
+			return sphere_intersect(obj, ray, dist);
+		case PLANE:
+			return plane_intersect(obj, ray, dist);
+	}
+
+	// unknown object type
+	return (0);
+}
+
+float4	get_normal(__global t_primitive *obj, float4 point)
+{
+	switch (obj->type)
+	{
+		case SPHERE:
+			return NORMALIZE(point - obj->position);
+		case PLANE:
+			return obj->normal;
+	}
+	return (float4)(0, 0, 0, 0);
+}
+
+int		color_to_int(float4 color)
+{
+	int r = (int)clamp(color.x * 255.0f, 0.0f, 255.0f);
+	int g = (int)clamp(color.y * 255.0f, 0.0f, 255.0f);
+	int b = (int)clamp(color.z * 255.0f, 0.0f, 255.0f);
+
+	return (int)((r << 16) + (g << 8) + b);
 }
 
 __kernel void	example(							//main kernel, called for each ray
@@ -149,23 +183,71 @@ __kernel void	example(							//main kernel, called for each ray
 
 	if (i >= (size_t)argn->screen_size.x * (size_t)argn->screen_size.y)	//the number of kernel executed can overflow the number initialy needed, this is a simple protection to avoid bad memory acces
 		return ;
+
 	float	x = (float)(i % argn->screen_size.x) /*- ((float)argn->screen_size.x / 2.0f)*/;
 	float	y = (float)(i / argn->screen_size.x) /*- ((float)argn->screen_size.y / 2.0f)*/;
 	t_ray ray;
 	ray.origin = cam->pos;
 	ray.direction = NORMALIZE(cam->vpul + cam->right * x - cam->up * y);
-//	printf("%v4f\n", ray.direction);
+
 	float dist = MAXFLOAT;
-	//printf("dist = %f", dist);
-	if (dist_colision_sphere(&dist, ray, objects))
+	int id = -1;
+	int cur = 0;
+	for (cur = 0; cur < argn->nb_objects; cur++)
 	{
-		out[i] = colision_sphere(ray, dist, objects, argn, lights);
-		out[i] = out[i] > 0xff ? 0xff : out[i];
-//		out[i] = 0xffffff;
-		//out[i] = out[i] <= 0x33 ? 0x33 : out[i];
-		//if (i == 500 + 500 * 1000)
-			//printf("%v4f\n", tmp_l);
+		if (intersect(&objects[cur], &ray, &dist))
+			id = cur;
 	}
-		if (i == 500 + 500 * 1000)
-			out[i] = 0xffffff;
+
+	// no primitive was hit
+	if (id == -1)
+		return ;
+
+	__global t_primitive *prim = &objects[id];
+	float4 collision = ray.origin + ray.direction * dist;
+	float4 color = (float4)(0, 0, 0, 0);
+
+	// we hit something... lights, maestro!
+	int cur_l;
+	t_ray ray_l;
+	for (cur_l = 0; cur_l < argn->nb_lights; cur_l++)
+	{
+		t_light light = lights[cur_l];
+
+		// check if our light source is blocked by an object
+		ray_l.origin = collision;
+		ray_l.direction = NORMALIZE(light.position - collision);
+		float dist_l = length(light.position - collision);
+		int hit = 0;
+
+		dist = MAXFLOAT;
+		for (cur = 0; cur < argn->nb_objects; cur++)
+		{
+			if (cur == id) // skip the intersection with our primitive
+				continue ;
+			if ((hit = intersect(&objects[cur], &ray_l, &dist)))
+			{
+				if (dist <= dist_l)
+					break ;
+				else
+					hit = 0;
+			}
+		}
+
+		// did we hit something? don't calculate color for this light, shadow!
+		if (hit)
+			continue ;
+
+		// get the color for this light
+		float4 norm = get_normal(prim, collision);
+
+		float scal;
+		if ((scal = DOT(ray_l.direction, norm)) > 0)
+			color += prim->color * light.color * scal;
+	}
+
+	// this isnt mathematically correct but is definitely better looking for now
+	color /= (float)argn->nb_lights;
+
+	out[i] = color_to_int(color);
 }
