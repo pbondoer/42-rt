@@ -47,11 +47,9 @@ NOTE HYPER IMPORTANTE:
 pour la compatibilité AMD, il faut continuer d'utiliser les flags __global et les pointeurs
 (AMD ne copie pas les déférencements de pointeurs dans la stack, ce qui fait que les objets et la lumière n'étaient pas envoyé aux calculs)
 */
-//float4	calcul_lum(float4 colision, float4 norm, __global t_light *light, __global t_argn *argn, __global t_primitive *objects);
-//int		dist_colision_sphere(float	*dist, t_ray ray, __global t_primitive *object);
-//int		colision_sphere(t_ray ray, float dist, __global t_primitive *objects, __global t_argn *argn, __global t_light *lights);
 float4	local_normalize(float4 v);
 float	local_dot(float4 v1, float4 v2);
+float4	local_length(float4 v);
 
 int		plane_intersect(__global t_primitive *obj, t_ray *ray, float *dist);
 int		sphere_intersect(__global t_primitive *obj, t_ray *ray, float *dist);
@@ -63,9 +61,15 @@ int		color_to_int(float4 color);
 #if 0
 # define DOT local_dot
 # define NORMALIZE local_normalize
+# define LENGTH local_length
 #else
 # define DOT dot
 # define NORMALIZE normalize
+# define LENGTH length
+#endif
+
+#ifndef EPSILON
+# define EPSILON 0.01f
 #endif
 
 float	local_dot(float4 v1, float4 v2)
@@ -82,19 +86,24 @@ float4	local_normalize(float4 v)
 	return (v / sqrt(t));
 }
 
+float4 local_length(float4 v)
+{
+	return sqrt(v.x * v.x + v.y * v.y + v.z * v.z);
+}
+
 int		plane_intersect(__global t_primitive *obj, t_ray *ray, float *dist)
 {
 	float d = DOT(obj->normal, ray->direction);
 
 	if (d == 0)
-		return (0); // we are facing the plane directly so no collision
+		return (0);
 
 	float new_dist = DOT(obj->position - ray->origin, obj->normal) / d;
 
 	if (new_dist > 0 && new_dist < *dist)
 	{
 		*dist = new_dist;
-		return (1);
+		return (d > 0 ? -1 : 1);
 	}
 	return (0);
 }
@@ -121,7 +130,7 @@ int		sphere_intersect(__global t_primitive *obj, t_ray *ray, float *dist)
 			if (x2 < *dist)
 			{
 				*dist = x2;
-				return (0); // inside the primitive
+				return (-1);
 			}
 		}
 		else
@@ -199,10 +208,15 @@ __kernel void	example(							//main kernel, called for each ray
 	float dist = MAXFLOAT;
 	int id = -1;
 	int cur = 0;
+	int	t_hit = 0;
+	int s_hit = 0;
 	for (cur = 0; cur < argn->nb_objects; cur++)
 	{
-		if (intersect(&objects[cur], &ray, &dist))
+		if ((t_hit = intersect(&objects[cur], &ray, &dist))) //on sauvegarde dans une variable temporaire la veleur de hit (pour éviter de devoir rappeler la fonction intersect)
+		{
 			id = cur;
+			s_hit = t_hit; //si il y avait collision, on sauvegarde la valeur de t_hit dans s_hit pour l'eventuelle inversion de normale plus tard
+		}
 	}
 
 	// no primitive was hit
@@ -221,16 +235,15 @@ __kernel void	example(							//main kernel, called for each ray
 		t_light light = lights[cur_l];
 
 		// check if our light source is blocked by an object
-		ray_l.origin = collision;
+		// shadows start a tiny amount from the actual sphere to prevent rounding errors
+		float dist_l = LENGTH(light.position - collision);
 		ray_l.direction = NORMALIZE(light.position - collision);
-		float dist_l = length(light.position - collision);
+		ray_l.origin = collision + ray_l.direction * EPSILON;
 		int hit = 0;
 
 		dist = MAXFLOAT;
 		for (cur = 0; cur < argn->nb_objects; cur++)
 		{
-			if (cur == id) // skip the intersection with our primitive
-				continue ;
 			if ((hit = intersect(&objects[cur], &ray_l, &dist)))
 			{
 				if (dist < dist_l) // it is between us
@@ -246,7 +259,8 @@ __kernel void	example(							//main kernel, called for each ray
 
 		// get the color for this light
 		float4 norm = get_normal(prim, collision);
-
+		if (s_hit == -1) //si on était dans la primitive, on inverse la normale
+			norm = -norm;
 		// diffuse lighting
 		float scal;
 		if ((scal = DOT(ray_l.direction, norm)) > 0)
