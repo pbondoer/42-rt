@@ -266,7 +266,7 @@ __kernel void	example(							//main kernel, called for each ray
 	float	y = (float)(i / argn->screen_size.x) /*- ((float)argn->screen_size.y / 2.0f)*/;
 	t_ray ray;
 	ray.origin = cam->pos;
-	ray.direction = NORMALIZE(cam->vpul + cam->right * x - cam->up * y);
+	ray.direction = NORMALIZE(cam->vpul + NORMALIZE(cam->right) * x - NORMALIZE(cam->up) * y);
 
 	float dist = MAXFLOAT;
 	int id = -1;

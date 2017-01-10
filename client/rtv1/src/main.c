@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/09 09:15:54 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/10 04:51:45 by pbondoer         ###   ########.fr       */
+/*   Updated: 2017/01/10 05:02:51 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,6 +129,36 @@ void		keys(void)
 }
 */
 
+t_vector	cl_float4_to_vector(cl_float4 v)
+{
+	return ((t_vector){.x = v.x, .y = v.y, .z = v.z});
+}
+
+cl_float4	vector_to_cl_float4(t_vector v)
+{
+	return ((cl_float4){.x = v.x, .y = v.y, .z = v.z, .w = 0.0f});
+}
+
+void		rotate_cam(double angle, t_vector axe)
+{
+	t_quaternion 	q;
+	t_matrix		*mat;
+	t_vector		*tva;
+
+	q = ft_quat_rotation_build(angle, axe);
+	q = ft_quat_multiply(cam()->orientation, q);
+	mat = ft_quat_rotation_to_matrix(NULL, q);
+	tva = ft_matrix_multply_vector_array((t_vector[3]){
+		cl_float4_to_vector(cam()->dir),
+		cl_float4_to_vector(cam()->up),
+		cl_float4_to_vector(cam()->right)}, 3, mat);
+	cam()->dir = vector_to_cl_float4(tva[0]);
+	cam()->up = vector_to_cl_float4(tva[1]);
+	cam()->right = vector_to_cl_float4(tva[2]);
+	ft_matrix_free(mat);
+	calc_vpul();
+}
+
 int			keys(t_ftx_data *data)
 {
 	t_ubmp		out;
@@ -142,10 +172,14 @@ int			keys(t_ftx_data *data)
 		cam()->pos.x += 10;
 	if (data->keymap[KEY_A].status == FTX_KEY_STATUS_PRESSED)
 		cam()->pos.x -= 10;
+//	if (data->keymap[KEY_Q].status == FTX_KEY_STATUS_PRESSED)
+//		cam()->pos.z += 10;
+//	if (data->keymap[KEY_E].status == FTX_KEY_STATUS_PRESSED)
+//		cam()->pos.z -= 10;
 	if (data->keymap[KEY_Q].status == FTX_KEY_STATUS_PRESSED)
-		cam()->pos.z += 10;
+		rotate_cam(0.5, ft_vector(0, 1, 0));
 	if (data->keymap[KEY_E].status == FTX_KEY_STATUS_PRESSED)
-		cam()->pos.z -= 10;
+		rotate_cam(-0.5, ft_vector(0, 1, 0));
 	out.size = ft_point(SW, SH);
 	out.data = (int*)ft_memalloc(sizeof(int) * SW * SH);
 	ftocl_clear_current_kernel_arg(4);
