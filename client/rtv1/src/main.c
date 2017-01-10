@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/09 09:15:54 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/10 05:02:51 by pbondoer         ###   ########.fr       */
+/*   Updated: 2017/01/10 05:16:39 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -172,14 +172,18 @@ int			keys(t_ftx_data *data)
 		cam()->pos.x += 10;
 	if (data->keymap[KEY_A].status == FTX_KEY_STATUS_PRESSED)
 		cam()->pos.x -= 10;
-//	if (data->keymap[KEY_Q].status == FTX_KEY_STATUS_PRESSED)
-//		cam()->pos.z += 10;
-//	if (data->keymap[KEY_E].status == FTX_KEY_STATUS_PRESSED)
-//		cam()->pos.z -= 10;
 	if (data->keymap[KEY_Q].status == FTX_KEY_STATUS_PRESSED)
-		rotate_cam(0.5, ft_vector(0, 1, 0));
+		cam()->pos.z += 10;
 	if (data->keymap[KEY_E].status == FTX_KEY_STATUS_PRESSED)
-		rotate_cam(-0.5, ft_vector(0, 1, 0));
+		cam()->pos.z -= 10;
+	if (data->keymap[KEY_LEFT].status == FTX_KEY_STATUS_PRESSED)
+		rotate_cam(-0.05, ft_vector(0, 1, 0));
+	if (data->keymap[KEY_RIGHT].status == FTX_KEY_STATUS_PRESSED)
+		rotate_cam(0.05, ft_vector(0, 1, 0));
+	if (data->keymap[KEY_UP].status == FTX_KEY_STATUS_PRESSED)
+		rotate_cam(-0.05, ft_vector(1, 0, 0));
+	if (data->keymap[KEY_DOWN].status == FTX_KEY_STATUS_PRESSED)
+		rotate_cam(0.05, ft_vector(1, 0, 0));
 	out.size = ft_point(SW, SH);
 	out.data = (int*)ft_memalloc(sizeof(int) * SW * SH);
 	ftocl_clear_current_kernel_arg(4);
