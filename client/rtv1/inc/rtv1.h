@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/15 00:05:50 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/07 16:02:36 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/09 21:29:06 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 
 typedef enum	e_prim_type
 {
-	NONE = 0, SPHERE = 1, PLANE = 2, CONE = 3, CYLINDER = 4
+	SPHERE = 0, PLANE = 1, CONE = 2, CYLINDER = 3
 }				t_prim_type;
 
 /*
@@ -48,7 +48,7 @@ typedef struct	s_primitive
 {
 	t_prim_type		type;
 	cl_float4		position;
-	cl_float4		normal;
+	cl_float4		direction;
 	cl_float4		color;
 	cl_float		radius;
 }				t_primitive;

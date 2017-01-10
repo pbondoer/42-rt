@@ -1,13 +1,13 @@
 typedef enum	e_prim_type
 {
-	NONE = 0, SPHERE = 1, PLANE = 2, CONE = 3, CYLINDER = 4
+	SPHERE = 0, PLANE = 1, CONE = 2, CYLINDER = 3
 }				t_prim_type;
 
 typedef struct	s_primitive
 {
 	t_prim_type		type;
 	float4		position;
-	float4		normal;
+	float4		direction;
 	float4		color;
 	float		radius;
 }				t_primitive;
@@ -49,11 +49,17 @@ pour la compatibilité AMD, il faut continuer d'utiliser les flags __global et l
 */
 float4	local_normalize(float4 v);
 float	local_dot(float4 v1, float4 v2);
-float4	local_length(float4 v);
+float4	local_cross(float4 v1, float4 v2);
+float	local_length(float4 v);
+
+float	addv(float4 v);
 
 int		plane_intersect(__global t_primitive *obj, t_ray *ray, float *dist);
 int		sphere_intersect(__global t_primitive *obj, t_ray *ray, float *dist);
+int		cylinder_intersect(__global t_primitive *obj, t_ray *ray, float *dist);
+int		cone_intersect(__global t_primitive *obj, t_ray *ray, float *dist);
 int		intersect(__global t_primitive *obj, t_ray *ray, float *dist);
+int		solve_quadratic(float a, float b, float c, float *dist);
 float4	get_normal(__global t_primitive *obj, float4 point);
 float4	phong(float4 dir, float4 norm);
 int		color_to_int(float4 color);
@@ -62,15 +68,27 @@ int		color_to_int(float4 color);
 # define DOT local_dot
 # define NORMALIZE local_normalize
 # define LENGTH local_length
+# define CROSS local_cross
 #else
 # define DOT dot
 # define NORMALIZE normalize
 # define LENGTH length
+# define CROSS cross
 #endif
 
 #ifndef EPSILON
-# define EPSILON 0.01f
+# define EPSILON 0.1f
 #endif
+
+float4	local_cross(float4 v1, float4 v2)
+{
+	float4 res;
+
+	res.x = v1.y * v2.z - v1.z * v2.y;
+	res.y = v1.z * v2.x - v1.x * v2.z;
+	res.z = v1.x * v2.y - v1.y * v2.x;
+	return (res);
+}
 
 float	local_dot(float4 v1, float4 v2)
 {
@@ -86,19 +104,24 @@ float4	local_normalize(float4 v)
 	return (v / sqrt(t));
 }
 
-float4 local_length(float4 v)
+float	local_length(float4 v)
 {
 	return sqrt(v.x * v.x + v.y * v.y + v.z * v.z);
 }
 
+float	addv(float4 v)
+{
+	return (v.x + v.y + v.z);
+}
+
 int		plane_intersect(__global t_primitive *obj, t_ray *ray, float *dist)
 {
-	float d = DOT(obj->normal, ray->direction);
+	float d = DOT(obj->direction, ray->direction);
 
 	if (d == 0)
 		return (0);
 
-	float new_dist = DOT(obj->position - ray->origin, obj->normal) / d;
+	float new_dist = DOT(obj->position - ray->origin, obj->direction) / d;
 
 	if (new_dist > 0 && new_dist < *dist)
 	{
@@ -111,18 +134,48 @@ int		plane_intersect(__global t_primitive *obj, t_ray *ray, float *dist)
 int		sphere_intersect(__global t_primitive *obj, t_ray *ray, float *dist)
 {
 	float4 pos = obj->position - ray->origin;
-	pos.w = 0;
 
-	float c = pos.x * pos.x + pos.y * pos.y + pos.z * pos.z - obj->radius * obj->radius;
-	float a = ray->direction.x * ray->direction.x + ray->direction.y * ray->direction.y + ray->direction.z * ray->direction.z;
-	float b = 2 * (ray->direction.x * pos.x + ray->direction.y * pos.y + ray->direction.z * pos.z);
-	float delta = b * b - 4 * a * c;
+	float a = DOT(ray->direction, ray->direction);
+	float b = 2 * DOT(ray->direction, pos);
+	float c = DOT(pos, pos) - pow(obj->radius, 2);
+	return solve_quadratic(a, b, c, dist);
+}
+
+int		cylinder_intersect(__global t_primitive *obj, t_ray *ray, float *dist)
+{
+	float4 pos = obj->position - ray->origin;
+	float4 p = CROSS(pos, obj->direction);
+	float4 r = CROSS(ray->direction, obj->direction);
+
+	float a = DOT(r, r);
+	float b = 2 * DOT(r, p);
+	float c = DOT(p, p) - pow(obj->radius, 2) * DOT(obj->direction, obj->direction);
+	return solve_quadratic(a, b, c, dist);
+}
+
+int		cone_intersect(__global t_primitive *obj, t_ray *ray, float *dist)
+{
+	float4 pos = ray->origin - obj->position;
+	float4 dir = -ray->direction;
+
+	float r = 1 + pow(obj->radius, 2);
+	float dd = DOT(dir, obj->direction);
+
+	float a = DOT(dir, dir) - (r * pow(dd, 2));
+	float b = 2 * (DOT(dir, pos) - (r * dd * DOT(pos, obj->direction)));
+	float c = DOT(pos, pos) - (r * pow(DOT(pos, obj->direction), 2));
+	return solve_quadratic(a, b, c, dist);
+}
+
+int		solve_quadratic(float a, float b, float c, float *dist)
+{
+	float delta = b * b - 4.0f * a * c;
 	if (delta < 0)
 		return (0);
 
 	delta = sqrt(delta);
-	float x1 = (b - delta) / (2 * a);
-	float x2 = (b + delta) / (2 * a);
+	float x1 = (b - delta) / (2.0f * a);
+	float x2 = (b + delta) / (2.0f * a);
 	if (x2 > 0)
 	{
 		if (x1 < 0)
@@ -153,6 +206,10 @@ int		intersect(__global t_primitive *obj, t_ray *ray, float *dist)
 			return sphere_intersect(obj, ray, dist);
 		case PLANE:
 			return plane_intersect(obj, ray, dist);
+		case CONE:
+			return cone_intersect(obj, ray, dist);
+		case CYLINDER:
+			return cylinder_intersect(obj, ray, dist);
 	}
 
 	// unknown object type
@@ -161,12 +218,18 @@ int		intersect(__global t_primitive *obj, t_ray *ray, float *dist)
 
 float4	get_normal(__global t_primitive *obj, float4 point)
 {
+	float t;
+
 	switch (obj->type)
 	{
 		case SPHERE:
 			return NORMALIZE(point - obj->position);
 		case PLANE:
-			return obj->normal;
+			return obj->direction;
+		case CYLINDER:
+		case CONE:
+			t = DOT(-obj->direction, obj->position) + DOT(point, obj->direction) / addv(pow(obj->direction, 2));
+			return NORMALIZE(point - (obj->position + obj->direction * t));
 	}
 	return (float4)(0, 0, 0, 0);
 }
@@ -246,7 +309,7 @@ __kernel void	example(							//main kernel, called for each ray
 		{
 			if ((hit = intersect(&objects[cur], &ray_l, &dist)))
 			{
-				if (dist < dist_l) // it is between us
+				if (dist > EPSILON && dist < dist_l) // it is between us
 					break ;
 				else // it is behind us
 					hit = 0;
