@@ -6,13 +6,11 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/09 09:15:54 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/14 16:52:35 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/26 06:22:15 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <rtv1.h>
-#include <stdio.h>
-#include <time.h>
 
 int			cb_exit(int k, int s, void *p)
 {
@@ -23,37 +21,28 @@ int			cb_exit(int k, int s, void *p)
 	return (0);
 }
 
-t_light	**lights(void)
+t_primitive	cone(cl_float4 pos, cl_float4 direction, cl_float alpha)
 {
-	static t_light	*data = NULL;
-
-	return (&data);
-}
-
-t_primitive	cone(cl_float4 pos, cl_float4 direction, cl_float alpha, cl_float4 color)
-{
-	printf("%f \n", alpha * M_PI / 180.0f);
 	return ((t_primitive){.type = CONE, .position = pos,
-		.direction = direction, .radius = alpha * M_PI / 180.0f, .color = color});
+		.direction = direction, .radius = alpha * M_PI / 180.0f});
 }
 
-t_primitive	cylinder(cl_float4 pos, cl_float4 direction, cl_float radius, cl_float4 color)
+t_primitive	cylinder(cl_float4 pos, cl_float4 direction, cl_float radius)
 {
 	return ((t_primitive){.type = CYLINDER, .position = pos,
-		.direction = direction, .radius = radius, .color = color});
+		.direction = direction, .radius = radius});
 }
 
-t_primitive	sphere(cl_float4 pos, cl_float radius, cl_float4 color)
+t_primitive	sphere(cl_float4 pos, cl_float radius)
 {
 	return ((t_primitive){.type = SPHERE, .position = pos,
-		.direction = {.x = 0, .y = 0, .z = 1, .w = 0}, .radius = radius,
-		.color = color});
+		.direction = {.x = 0, .y = 0, .z = 1, .w = 0}, .radius = radius});
 }
 
-t_primitive	plane(cl_float4 pos, cl_float4 norm, cl_float4 color)
+t_primitive	plane(cl_float4 pos, cl_float4 norm)
 {
 	return ((t_primitive){.type = PLANE, .position = pos,
-		.direction = norm, .radius = 0, .color = color});
+		.direction = norm, .radius = 0});
 }
 
 t_light		light(cl_float4 pos, cl_float4 color)
@@ -169,9 +158,13 @@ void		rotate_cam(double angle, t_vector axe)
 
 int			keys(t_ftx_data *data)
 {
-	static t_ubmp		out = {.size = {SW, SH}, .data = NULL};
+	static t_ubmp		out = {.size = {0, 0}, .data = NULL};
+	size_t				size;
 
 	(void)data;
+	out.size.x = argn()->screen_size.x;
+	out.size.y = argn()->screen_size.y;
+	size = argn()->screen_size.x * argn()->screen_size.y;
 	if (data->keymap[KEY_W].status == FTX_KEY_STATUS_PRESSED)
 		cam()->pos.y += 10;
 	if (data->keymap[KEY_S].status == FTX_KEY_STATUS_PRESSED)
@@ -192,22 +185,26 @@ int			keys(t_ftx_data *data)
 		rotate_cam(-0.05, ft_vector(1, 0, 0));
 	if (data->keymap[KEY_DOWN].status == FTX_KEY_STATUS_PRESSED)
 		rotate_cam(0.05, ft_vector(1, 0, 0));
-//	out.size = ft_point(SW, SH);
 	if (out.data == NULL)
-	out.data = (int*)ft_memalloc(sizeof(int) * SW * SH);
-	ftocl_clear_current_kernel_arg(4);
+		out.data = (int*)ft_memalloc(sizeof(int) * out.size.x * out.size.y);
+	ftocl_clear_current_kernel_arg(4);													//leaks?
+	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 4, sizeof(t_camera), (void*)cam());	//leaks?
+
 //	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 2, sizeof(t_primitive) *
 //		argn()->nb_objects, (void*)*prim());
-	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 4, sizeof(t_camera), (void*)cam());
 
-	ftocl_start_current_kernel(1, (const size_t[1]){SW * SH}, NULL);
-	ftocl_read_current_kernel_arg(0, out.data);
+	ftocl_start_current_kernel(1, &size, NULL);											//leaks?
+//combinaison des deux? yep, confirmé, il y a une couille dans le potage
+	ftocl_read_current_kernel_arg(0, out.data);											//leaks?
+
+//	printf("%p\n", ftx_data()->focused_window->vbuffer);
+
 	ftx_fill_image(ftx_data()->focused_window->vbuffer, 0x00FFFF, 1);
 	ftx_put_ubmp_img(ftx_data()->focused_window->vbuffer, ft_point(0, 0), &out,
 					NOMASK);
-//	ft_free(out.data);
-	ftx_refresh_window(ftx_data()->focused_window);
 
+	ftx_refresh_window(ftx_data()->focused_window);
+//	ft_free(out.data);
 	return (0);
 }
 
@@ -216,32 +213,20 @@ void		rtv1(void)
 	t_ubmp		out;
 	cl_event	event;
 
-	argn()->screen_size = (cl_int2){.x = SW, .y = SH};
-	argn()->nb_objects = 4;
-	argn()->nb_lights = 1;
-	*prim() = (t_primitive*)ft_malloc(sizeof(t_primitive) * argn()->nb_objects);
-	*lights() = (t_light*)ft_malloc(sizeof(t_light) * argn()->nb_lights);
-	prim()[0][0] = cone((cl_float4){.x = 0, .y = 0, .z = 800, .w = 0}, (cl_float4){.x = 0, .y = 1, .z = 0, .w = 0}, 1, (cl_float4){.x = 1, .y = 0, .z = 0, .w = 0});
-	prim()[0][1] = sphere((cl_float4){.x = -150, .y = 0, .z = 500, .w = 0}, 100, (cl_float4){.x = 1, .y = 1, .z = 0, .w = 0});
-	prim()[0][2] = plane((cl_float4){.x = 0, .y = 0, .z = 1000, .w = 0}, (cl_float4){.x = 0, .y = 0, .z = 1, .w = 0}, (cl_float4){.x = 1, .y = 1, .z = 0, .w = 0});
-	prim()[0][3] = cylinder((cl_float4){.x = 150, .y = 0, .z = 300, .w = 0}, (cl_float4){.x = 1, .y = 1, .z = 0, .w = 0}, 20, (cl_float4){.x = 0, .y = 0, .z = 1, .w = 0});
-	lights()[0][0] = light((cl_float4){.x = 0, .y = 0, .z = 0, .w = 0},  (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
-	//lights()[0][1] = light((cl_float4){.x = 0, .y = 300, .z = 800, .w = 0}, (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
-	//lights()[0][2] = light((cl_float4){.x = -150, .y = 0, .z = 500, .w = 0}, (cl_float4){.x = 1, .y = 0, .z = 1, .w = 0});
-	cam()->pos = (cl_float4){.x = 0, .y = 0, .z = 0, .w = 0};
-	cam()->vp_size = (cl_int2){.x = SW, .y = SH};
-	cam()->dist = 800;
 	calc_vpul();
-	out.size = ft_point(SW, SH);
-	out.data = (int*)ft_malloc(sizeof(int) * SW * SH);
+	out.size = ft_point(argn()->screen_size.x, argn()->screen_size.y);
+	out.data = (int*)ft_malloc(sizeof(int) * out.size.x * out.size.y);
+	printf("plouf\n");
 	update_kernel_args();
-	event = ftocl_start_current_kernel(1, (const size_t[1]){SW * SH}, NULL);
+	printf("caca\n");
+	event = ftocl_start_current_kernel(1, (const size_t[1]){out.size.x * out.size.y}, NULL);
 	clWaitForEvents(1, &event);
 	clReleaseEvent(event);
 	ftocl_read_current_kernel_arg(0, out.data);
-	ftx_new_window(ft_point(SW, SH), "test", NULL);
+	ftx_new_window(ft_point(out.size.x, out.size.y), "test", NULL);
 	ftx_put_ubmp_img(ftx_data()->focused_window->vbuffer, ft_point(0, 0), &out,
 					NOMASK);
+	ft_free(out.data);
 	printf("Kernel: %.8s was succesfully loaded\n",
 				(char*)&ftocl_data()->current_kernel->id);
 	ftx_key_hook(KEY_EXIT, cb_exit, NULL);
@@ -256,18 +241,25 @@ void		rtv1(void)
 int			main(const int argc, char **argv, char **env)
 {
 	int		fd;
+	char	*src;
 
 	ft_init(env);
 	if (argc != 2)
 		ft_end(0 * printf("\nUsage: \t%s/%s <scene.json>\n\n", ft_pwd(),
 										ft_path_name(argv[0])));
+	if ((fd = open(argv[1], O_RDONLY)) == -1)
+		ft_end(-1);
+	parser(src = ft_readfile(fd));
+	close(fd);
+	ft_free(src);
 	if ((fd = open(OCL_SOURCE_PATH, O_RDONLY)) == -1)
 		ft_end(-1);
 	ftocl_make_program(ft_str_to_id64("rtv1"),
-		ft_str_clear_commentaries(ft_readfile(fd)), NULL);
+		src = ft_str_clear_commentaries(ft_readfile(fd)), NULL);
 	close(fd);
 	if (!(fd = ftocl_set_current_kernel(ft_str_to_id64("example"))))
 		rtv1();
+	ft_free(src);
 	if (fd == 1)
 		ft_end(0 * printf("kernel was not found\n"));
 	ft_end(0);

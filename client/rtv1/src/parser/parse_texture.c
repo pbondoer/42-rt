@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/26 02:17:24 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/26 02:23:55 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/26 06:09:44 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void				parse_texture_0(t_texture *out, t_json_value *v,
 	if (v != NULL && v->type == string && v->ptr != NULL)
 		while (++out->info_index < (unsigned long)textures_holder()->nb_info)
 			if (!ft_strcmp(textures_holder()->path[out->info_index],
-					ft_realpath((char*)v->ptr, buff)))
+					ft_realpath(((t_json_string*)v->ptr)->ptr, buff)))
 				break ;
 }
 

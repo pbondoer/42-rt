@@ -6,11 +6,12 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/21 19:24:09 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/26 02:36:53 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/26 05:42:51 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <rtv1.h>
+#include <stdio.h>
 
 void				parser(const char *src)
 {
@@ -37,9 +38,13 @@ void				parser(const char *src)
 	if (!check_parsed_data())
 		ft_error(EINTERN, "Invalid json values\n");
 	ft_json_free(root);
+	printf("thold: %d, %d\n", textures_holder()->info[0].size.x, textures_holder()->info[0].size.y);
+	printf("%s\n", textures_holder()->path[0]);
+/*
 	print_argn();
 	print_cam();
 	print_materials();
 	print_objects();
 	print_lights();
+*/
 }

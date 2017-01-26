@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/26 02:05:29 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/26 02:06:09 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/26 05:11:34 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ void				parse_lights(t_json_value *l)
 		(cl_float4){.x = 0, .y = 0, .z = 0, .w = 0}), .color =
 		cl_vector_from_json_array(ft_json_search_pair_in_object(ar->value[i],
 		(t_json_string){.length = 5, .ptr = "color"}),
-		(cl_float4){.x = 255, .y = 255, .z = 255, .w = 0})};
+		(cl_float4){.x = 1, .y = 1, .z = 1, .w = 0})};
 }

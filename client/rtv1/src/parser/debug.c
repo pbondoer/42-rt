@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/26 01:54:25 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/26 02:06:52 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/26 04:12:02 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ void				print_objects(void)
 void				print_lights(void)
 {
 	printf("\n\nnb_lights: %d\n\n", argn()->nb_lights);
+	printf("ptr: %p\n\n", *lights());
 	for (int i = 0; i < argn()->nb_lights; ++i)
 	{
 		t_light p = (*lights())[i];

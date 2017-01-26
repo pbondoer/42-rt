@@ -1,39 +1,92 @@
-typedef enum	e_prim_type
+typedef enum		e_prim_type
 {
-	SPHERE = 0, PLANE = 1, CONE = 2, CYLINDER = 3
-}				t_prim_type;
+	INVALID = -1, SPHERE = 0, PLANE = 1, CONE = 2, CYLINDER = 3, PARABOLOID = 4
+}					t_prim_type;
 
-typedef struct	s_primitive
+typedef enum		e_perturbation_type
+{
+	NONE = 0, SINE = 1, CHECKERBOARD = 2
+}					t_perturbation_type;
+
+typedef struct		s_perturbation
+{
+	t_perturbation_type	normal;
+	t_perturbation_type	color;
+}					t_perturbation;
+
+typedef struct		s_texture
+{
+	ulong			info_index;
+	float2			stretch;
+}					t_texture;
+
+typedef struct		s_material
+{
+	float4			color;
+	float			diffuse;
+	float			specular;
+	float			alpha;
+	float			refraction;
+	t_perturbation	perturbation;
+	t_texture		texture;
+	t_texture		bumpmap;
+}					t_material;
+
+typedef struct		s_img_info
+{
+	ulong			index;
+	int2			size;
+}					t_img_info;
+
+typedef struct		s_camera
+{
+	float4			pos;
+	float4			dir;
+	float4			up;
+	float4			right;
+	float4			vpul;
+	float2			vp_size;
+}					t_camera;
+
+typedef struct		s_limit
+{
+	int				relative;
+	float4			high;
+	float4			low;
+}					t_limit;
+
+typedef struct		s_primitive
 {
 	t_prim_type		type;
-	float4		position;
-	float4		direction;
-	float4		color;
-	float		radius;
-}				t_primitive;
+	float4			position;
+	float4			direction;
+	float			radius;
+	uint			material;
+	t_limit			limit;
+}					t_primitive;
 
-typedef struct	s_light
+typedef struct		s_light
 {
-	float4		position;
-	float4		color;
-}				t_light;
+	float4			position;
+	float4			color;
+}					t_light;
 
-typedef struct	s_argn		//structure containing the limit of out, rays and objects
-{							//note the corespondance with the C structure (types end position of variables correspond, but types have a preceding "cl_")
-	int2	screen_size;	//total screen size in pixels (accesed by .x and .y)
-	int		nb_objects;		//total number of objects in the scene
-	int		nb_lights;		//total number of lights in the scene
-}				t_argn;		//norm42 magle
-
-typedef struct	s_camera	//note: yes, this structure is not equivalent to s_camera in rtv1.h
+typedef struct		s_argn
 {
-	float4	pos;			//
-	float4	dir;			//
-	float4	up;				//
-	float4	right;			//
-	float4	vpul;			//
-	int2	vp_size;		//
-}				t_camera;
+	int2			screen_size;
+	int				nb_objects;
+	int				nb_lights;
+	float			ambient;
+	float			direct;
+	float			global_illumination;
+	int				global_illumination_samples;
+	int				antialias;
+	int				bounce_depth;
+	int				filter;
+	int				stereoscopy;
+	int				nb_info;
+	int				nb_materials;
+}					t_argn;
 
 typedef struct	s_ray
 {
@@ -207,7 +260,7 @@ int		solve_quadratic(float a, float b, float c, float *dist)
 		*dist = x1;
 		return (1);
 	}
-	
+
 	/*
 	if (x1 > 0) // then x2 > 0 && x2 > x1
 	{
@@ -278,11 +331,14 @@ int		color_to_int(float4 color)
 }
 
 __kernel void	example(							//main kernel, called for each ray
-		__global int *out,				//int bitmap, his size is equal to screen_size.x * screen_size.y
-		__global t_argn *argn,			//structure containing important info on how to acces out, rays and objects
-		__global t_primitive *objects,	//set of objects in the scene, the number of objects (and so the limit of this array), is stored in argn
-		__global t_light *lights,
-		__global t_camera *cam)			//vector3 rays stored has float4 for convenience, the size of the array is screen_size.x * screen_size.y
+		__global int			*out,				//int bitmap, his size is equal to screen_size.x * screen_size.y
+		__global t_argn			*argn,			//structure containing important info on how to acces out, rays and objects
+		__global t_primitive	*objects,	//set of objects in the scene, the number of objects (and so the limit of this array), is stored in argn
+		__global t_light		*lights,
+		__global t_camera		*cam,
+		__global t_img_info		*img_info,
+		__global t_material		*materials,
+		__global int			*raw_bmp)
 {
 	//mode 2: we use 1D Kernels:
 	size_t i = get_global_id(0);	//id of the kernel in the global call
@@ -366,12 +422,14 @@ __kernel void	example(							//main kernel, called for each ray
 					norm = -norm;
 
 				// ambient light
-				cur_color += prim->color * 0.05f; // TODO: ambient amount should be configurable
+//				cur_color += prim->color * 0.05f; // TODO: ambient amount should be configurable
+				cur_color += materials[prim->material].color * 0.05f;
 
 				// diffuse lighting
 				float scal;
 				if ((scal = DOT(ray_l.direction, norm)) > 0)
-					cur_color += prim->color * light.color * scal; // TODO: diffuse coef
+//					cur_color += prim->color * light.color * scal; // TODO: diffuse coef
+					cur_color += materials[prim->material].color * light.color * scal;
 
 				// specular highlights (needs pow to make the curve sharper)
 				float4 ir = phong(-ray_l.direction, norm);
@@ -379,13 +437,21 @@ __kernel void	example(							//main kernel, called for each ray
 					cur_color += light.color * pow(scal, 20); // TODO: specular coef
 			}
 
-			color += cur_color; // / (float)argn->nb_lights
+			color += cur_color / (float)argn->nb_lights;
 			samples++;
 		}
 	}
-
 	// divide by the total amount of samples
 	color /= samples;
 
-	out[i] = color_to_int(color);
+//	out[i] = color_to_int(color);
+	int index = materials[objects->material].texture.info_index;
+	t_img_info info = img_info[index];
+	int t = info.index + (int)y * info.size.x + (int)x;
+	int o = raw_bmp[t] & 0x00FFFFFF;
+	//int o = ((unsigned int)raw_bmp[t] >> 8);
+	//o = ((raw_bmp[t] & 0x0000FF00) << 8) | ((raw_bmp[t] & 0xFF000000) >> 24) | ((raw_bmp[t] & 0x00FF0000) >> 8) ;
+	if (i == 1000)
+		printf("index: %d, t: %d, y: %d, %x, %x, %x\n", index, t, info.size.y, raw_bmp[0], raw_bmp[t], o);
+	out[i] = o;
 }

@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/15 00:05:50 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/26 02:35:20 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/26 03:38:46 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,6 +133,8 @@ typedef struct		s_argn
 	cl_int			bounce_depth;
 	cl_int			filter;
 	cl_int			stereoscopy;
+	cl_int			nb_info;
+	cl_int			nb_materials;
 }					t_argn;
 
 cl_float4			*ray_plane(const t_camera *cam, const cl_int2 screen_size);

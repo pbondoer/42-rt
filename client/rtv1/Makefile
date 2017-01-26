@@ -34,7 +34,8 @@ ITEMS = \
 		prim \
 		ray_plane \
 		textures_holder \
-		update_kernel_args
+		update_kernel_args \
+		lights
 
 #variables for Linux
 ifeq ($(shell uname),Linux)

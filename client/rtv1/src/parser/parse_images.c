@@ -6,11 +6,12 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/25 17:10:35 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/25 23:37:12 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/26 06:18:13 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <rtv1.h>
+#include <stdio.h>
 
 int					add_texture(void)
 {
@@ -19,8 +20,10 @@ int					add_texture(void)
 	if ((ubmp = ft_bmp_to_ubmp(ft_bitmap_file_load(
 		textures_holder()->path[textures_holder()->nb_info]))) == NULL)
 		return (ft_error(EINTERN, "bitmap could not be found/opened\n"));
+
 	textures_holder()->info[textures_holder()->nb_info].size =
 		(cl_int2){.x = ubmp->size.x, .y = ubmp->size.y};
+
 	if (textures_holder()->nb_info)
 		textures_holder()->info[textures_holder()->nb_info].index =
 		textures_holder()->info[textures_holder()->nb_info - 1].index +
@@ -28,16 +31,26 @@ int					add_texture(void)
 		textures_holder()->info[textures_holder()->nb_info - 1].size.y;
 	else
 		textures_holder()->info[textures_holder()->nb_info].index = 0;
+
 	textures_holder()->total_raw_size =
 		textures_holder()->info[textures_holder()->nb_info].index +
 		ubmp->size.x * ubmp->size.y;
+
 	textures_holder()->raw_bmp = ft_reallocf(textures_holder()->raw_bmp,
 		textures_holder()->info[textures_holder()->nb_info].index * sizeof(int),
 		textures_holder()->total_raw_size * sizeof(int));
+
+	printf("index: %llu\n", textures_holder()->info[textures_holder()->nb_info].index);
 	ft_memmove(&textures_holder()->raw_bmp[textures_holder()->info[
 		textures_holder()->nb_info].index], ubmp->data,
 		ubmp->size.x * ubmp->size.y * sizeof(int));
+
+	int t = textures_holder()->total_raw_size - 1;
+	printf("%x, %x\n", ubmp->data[0], ubmp->data[t]);
+
 	ft_free(ubmp->data);
+
+	printf("%x, %x\n", textures_holder()->raw_bmp[0], textures_holder()->raw_bmp[t]);
 	return ((int)ft_free(ubmp));
 }
 

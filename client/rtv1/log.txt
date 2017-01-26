@@ -5939,3 +5939,2233 @@ New log started
 Log ended
 New log started
 Log ended
+New log started
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:24:2: error: unknown type name 't_perturbation'
+        t_perturbation  perturbation;
+ ^
+<program source>:272:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:292:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:290:8: warning: unused variable 't'
+        float t;
+       ^
+<program source>:418:24: error: no member named 'color' in 'struct s_primitive'
+                                cur_color += prim->color * 0.05f;                                               
+                 ~~~~  ^
+<program source>:423:25: error: no member named 'color' in 'struct s_primitive'
+                                        cur_color += prim->color * light.color * scal;                      
+                  ~~~~  ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:278:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:298:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:296:8: warning: unused variable 't'
+        float t;
+       ^
+<program source>:424:24: error: no member named 'color' in 'struct s_primitive'
+                                cur_color += prim->color * 0.05f;                                               
+                 ~~~~  ^
+<program source>:429:25: error: no member named 'color' in 'struct s_primitive'
+                                        cur_color += prim->color * light.color * scal;                      
+                  ~~~~  ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:278:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:298:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:296:8: warning: unused variable 't'
+        float t;
+       ^
+<program source>:430:25: error: no member named 'color' in 'struct s_primitive'
+                                        cur_color += prim->color * light.color * scal;                      
+                  ~~~~  ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:278:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:298:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:296:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+
+OpenCL notify error (nb: 2): 
+[CL_INVALID_KERNEL_ARGS] : OpenCL Error : clEnqueueNDRangeKernel failed: kernel_arg 3 has not yet been initialized
+[ft_error] - starting of kernel failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+
+OpenCL notify error (nb: 2): 
+[CL_INVALID_BUFFER_SIZE] : OpenCL Error : clCreateBuffer failed: No device in the context supports the requested allocation size (-1407648512 bytes)!
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+[ft_error] - buffer creation failed
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+
+OpenCL notify error (nb: 2): 
+OpenCL Error : Error loading transfer buffer
+
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+
+OpenCL notify error (nb: 2): 
+OpenCL Error : Error loading transfer buffer
+
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+
+OpenCL notify error (nb: 2): 
+OpenCL Error : Error loading transfer buffer
+
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+
+OpenCL notify error (nb: 2): 
+OpenCL Error : Error loading transfer buffer
+
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+
+OpenCL notify error (nb: 2): 
+OpenCL Error : Error loading transfer buffer
+
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+
+OpenCL notify error (nb: 2): 
+OpenCL Error : Error loading transfer buffer
+
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+
+OpenCL notify error (nb: 2): 
+OpenCL Error : Error loading transfer buffer
+
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+
+OpenCL notify error (nb: 2): 
+OpenCL Error : Error loading transfer buffer
+
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+
+OpenCL notify error (nb: 2): 
+OpenCL Error : Error loading transfer buffer
+
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+
+OpenCL notify error (nb: 2): 
+OpenCL Error : Error loading transfer buffer
+
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+
+OpenCL notify error (nb: 2): 
+OpenCL Error : Error loading transfer buffer
+
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+[ft_error] - Parser encountered invalid object
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+<program source>:445:18: error: use of undeclared identifier 'cur_color'
+                printf("%f\n", cur_color.x);
+                 ^
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_DEVICE_NOT_AVAILABLE] : OpenCL Error : Error: Build Program driver returned (10007)
+
+OpenCL notify error (nb: 2): 
+OpenCL Warning : clBuildProgram failed: could not build program for 0x1022700 (GeForce GTX 660M) (err:-2)
+
+OpenCL notify error (nb: 3): 
+[CL_BUILD_ERROR] : OpenCL Build Error : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+<program source>:449:34: error: can't convert between vector values of different size ('float' and '__int2')
+        out[i] = raw_bmp[info.index + y * info.size + x];
+                               ~ ^ ~~~~~~~~~
+
+
+[ft_error] - Could not build program
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+<program source>:448:13: warning: unused variable 'info'
+        t_img_info info = img_info[materials[objects->material].texture.info_index];
+            ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Build Warning : Compiler build log:
+<program source>:279:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:299:10: warning: enumeration values 'INVALID' and 'PARABOLOID' not handled in switch
+        switch (obj->type)
+         ^
+<program source>:297:8: warning: unused variable 't'
+        float t;
+       ^
+
+
+Log ended

@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/22 19:43:49 by hmartzol          #+#    #+#             */
-/*   Updated: 2016/12/18 23:31:43 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/26 07:05:22 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,9 @@ inline static void		sf_bmp_to_ubmp(t_bitmap *bitmap, t_ubmp *out, t_point p,
 		t1 = out->data[t1];
 		t2 = (bitmap->info.alpha_bmask) ?
 			sf_apply_mask(t1, bitmap->info.alpha_bmask) << 24 : 0xFF000000;
-		t2 += sf_apply_mask(t1, bitmap->info.red_bmask) << 16;
-		t2 += sf_apply_mask(t1, bitmap->info.green_bmask) << 8;
-		t2 += sf_apply_mask(t1, bitmap->info.blue_bmask);
+		t2 |= sf_apply_mask(t1, bitmap->info.red_bmask) << 16;
+		t2 |= sf_apply_mask(t1, bitmap->info.green_bmask) << 8;
+		t2 |= sf_apply_mask(t1, bitmap->info.blue_bmask);
 		out->data[(bitmap->info.height - p.y - 1) * bitmap->info.width + p.x] =
 																			t2;
 	}
