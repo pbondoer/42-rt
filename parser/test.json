@@ -1,0 +1,147 @@
+{
+	"render_options": {
+		"size": [1920, 1080],
+		"lighting": {
+			"ambient": 0.05,
+			"direct": 1.0,
+			"global": 1.0
+		},
+		"global_illumination_samples": 32,
+		"antialias": 4,
+		"bounce_depth": 4,
+		"filter": "cartoon",
+		"stereoscopy": true
+	},
+	"camera": {
+		"position": [0, 0, 0],
+		"direction": [0, 0, 1]
+	},
+	"materials": {
+		"red": {
+			"color": [255, 0, 0],
+			"diffuse": 1.0,
+			"specular": 1.0,
+			"reflect": 0.0,
+			"alpha": 1.0,
+			"refraction": 1.33,
+			"perturbation": {
+				"normal": "sine",
+				"color": "sine"
+			},
+			"texture": "wood.bmp",
+			"bumpmap": "wood_bump.bmp"
+		}
+	},
+	"groups": [
+		{
+			"name": "cube",
+			"center": [0, 0, 0],
+			"objects": [
+				{
+					"type": "plane",
+					"position": [-0.5, 0, 0],
+					"direction": [-1, 0, 0],
+					"limit": {
+						"type": "relative",
+						"high": [null, 0.5, 0.5],
+						"low": [null, -0.5, -0.5]
+					}
+				},
+				{
+					"type": "plane",
+					"position": [0.5, 0, 0],
+					"direction": [1, 0, 0],
+					"limit": {
+						"type": "relative",
+						"high": [null, 0.5, 0.5],
+						"low": [null, -0.5, -0.5]
+					}
+				},
+				{
+					"type": "plane",
+					"position": [0, -0.5, 0],
+					"direction": [0, -1, 0],
+					"limit": {
+						"type": "relative",
+						"high": [0.5, null, 0.5],
+						"low": [-0.5, null, -0.5]
+					}
+				},
+				{
+					"type": "plane",
+					"position": [0, 0.5, 0],
+					"direction": [0, 1, 0],
+					"limit": {
+						"type": "relative",
+						"high": [0.5, null, 0.5],
+						"low": [-0.5, null, -0.5]
+					}
+				},
+				{
+					"type": "plane",
+					"position": [0, 0, -0.5],
+					"direction": [0, 0, -1],
+					"limit": {
+						"type": "relative",
+						"high": [0.5, 0.5, null],
+						"low": [-0.5, -0.5, null]
+					}
+				},
+				{
+					"type": "plane",
+					"position": [0, 0, 0.5],
+					"direction": [0, 0, 1],
+					"limit": {
+						"type": "relative",
+						"high": [0.5, 0.5, null],
+						"low": [-0.5, -0.5, null]
+					}
+				}
+			]
+		}
+	],
+	"objects": [
+		{
+			"type": "sphere",
+			"position": [0, 0, 200],
+			"radius": 20,
+			"material": "red",
+			"limit": {
+				"type": "absolute",
+				"high": [0, 0, 0],
+				"low": [0, 0, 0]
+			}
+		},
+		{
+			"type": "plane",
+			"position": [0, -200, 0],
+			"direction": [0, 1, 0],
+			"material": "red"
+		},
+		{
+			"type": "cylinder",
+			"position": [150, 0, 200],
+			"direction": [1, 1, 0],
+			"radius": 20,
+			"material": "red"
+		},
+		{
+			"type": "cone",
+			"position": [0, 0, 500],
+			"direction": [0, 1, 0],
+			"radius": 30,
+			"material": "red"
+		},
+		{
+			"type": "paraboloid",
+			"position": [0, -200, 0],
+			"direction": [0, -1, 0],
+			"radius": 1,
+			"material": "red"
+		}
+	],
+	"lights": [
+		{ "position": [0, 0, 0], "color": [255, 255, 255] },
+		{ "position": [0, 0, 100], "color": [255, 255, 255] }
+	]
+}
