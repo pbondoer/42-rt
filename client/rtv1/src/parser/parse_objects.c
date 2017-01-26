@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/26 02:02:23 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/26 10:39:59 by pbondoer         ###   ########.fr       */
+/*   Updated: 2017/01/26 10:54:23 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,8 @@ t_primitive			parse_object(t_json_value *o)
 		(t_json_string){.length = 6, .ptr = "radius"});
 	if (v != NULL && (v->type == integer || v->type == number) &&
 			v->ptr != NULL)
-		p.radius = (v->type == integer) ? (cl_float)*(int*)v->ptr :
-										(cl_float)*(double*)v->ptr;
+		p.radius = (v->type == integer) ? (cl_float) * (int*)v->ptr :
+										(cl_float) * (double*)v->ptr;
 	else
 		p.radius = 1.0f;
 	return (parse_object_0(o, p));
