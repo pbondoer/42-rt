@@ -6,11 +6,13 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 21:03:26 by hmartzol          #+#    #+#             */
-/*   Updated: 2016/12/17 23:50:34 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/22 02:51:15 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
+
+#if 0
 
 char	*ft_readfile(int fd)
 {
@@ -40,3 +42,32 @@ char	*ft_readfile(int fd)
 		file[size - 1] = '\0';
 	return (file);
 }
+
+#else
+
+char	*ft_readfile(int fd)
+{
+	int		ret;
+	char	*str;
+	char	*str2;
+	char	buf[4096 + 1];
+
+	if (fd == -1)
+		return (NULL);
+	str = ft_strnew(0);
+	while ((ret = read(fd, buf, 4096)))
+	{
+		buf[ret] = '\0';
+		str2 = ft_strnew(ret);
+		ft_strcpy(str2, buf);
+		str = ft_strmerge(str, str2);
+	}
+	if (ret == -1)
+	{
+		ft_strdel(&str);
+		return (NULL);
+	}
+	return (str);
+}
+
+#endif

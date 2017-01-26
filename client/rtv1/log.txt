@@ -1576,3 +1576,4366 @@ Log ended
 New log started
 Initializing OpenCL environement...
 Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+OpenCL Error : Error loading transfer buffer
+
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Warning: ft_free called on pointer not allocated by ft_malloc
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+
+OpenCL notify error (nb: 1): 
+[CL_INVALID_VALUE] : OpenCL Error : clEnqueueReadBuffer failed: NULL buffer.
+[ft_error] - reading of kernel arg failed
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+[ft_error] - kernel arg can't be created or is already set
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Initializing OpenCL environement...
+Log ended
+New log started
+Log ended
+New log started
+New log started
+New log started
+New log started
+New log started
+New log started
+New log started
+New log started
+New log started
+New log started
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+node is of type: 'array'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+node is NULL pointed
+Log ended
+New log started
+node is of type: 'string'
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+New log started
+Log ended
+New log started
+New log started
+New log started
+New log started
+New log started
+New log started
+New log started
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+New log started
+New log started
+New log started
+New log started
+Log ended
+New log started
+Log ended
+New log started
+New log started
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+[ft_error] - Invalid json values
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+New log started
+New log started
+New log started
+New log started
+Log ended
+New log started
+Log ended
+New log started
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+New log started
+Log ended
+New log started
+Log ended
+New log started
+New log started
+Log ended
+New log started
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+node is of type: 'object'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is NULL pointed
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is NULL pointed
+node is NULL pointed
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is NULL pointed
+node is NULL pointed
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is NULL pointed
+node is NULL pointed
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is NULL pointed
+node is NULL pointed
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is NULL pointed
+node is NULL pointed
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'boolean'
+node is NULL pointed
+node is of type: 'string'
+node is NULL pointed
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is NULL pointed
+node is NULL pointed
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is NULL pointed
+node is NULL pointed
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'boolean'
+node is NULL pointed
+node is NULL pointed
+node is NULL pointed
+node is NULL pointed
+node is NULL pointed
+node is NULL pointed
+node is NULL pointed
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is NULL pointed
+node is NULL pointed
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is NULL pointed
+node is NULL pointed
+node is NULL pointed
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'boolean'
+node is NULL pointed
+node is NULL pointed
+node is NULL pointed
+node is NULL pointed
+node is NULL pointed
+node is NULL pointed
+node is NULL pointed
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'boolean'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'boolean'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'boolean'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'boolean'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'object'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'string'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'string'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'boolean'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'string'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'boolean'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'string'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'boolean'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'string'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'boolean'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'string'
+Log ended
+New log started
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'boolean'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'number'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'null'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'boolean'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'number'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'string'
+node is of type: 'array'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'array'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'integer'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'object'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'string'
+Log ended
+New log started
+node is NULL pointed
+node is NULL pointed
+node is NULL pointed
+node is NULL pointed
+Log ended
+New log started
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'string'
+node is of type: 'string'
+Log ended
+New log started
+Log ended
+New log started
+[ft_error] - open call made by ft_open failled: New log started
+[ft_error] - open call made by ft_open failled: New log started
+New log started
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+New log started
+Log ended
+New log started
+Log ended
+New log started
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+New log started
+Log ended
+New log started
+Log ended
+New log started
+New log started
+New log started
+Log ended
+New log started
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended
+New log started
+Log ended

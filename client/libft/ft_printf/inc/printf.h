@@ -6,7 +6,7 @@
 /*   By: hmarot <hmarot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/14 12:04:11 by hmarot            #+#    #+#             */
-/*   Updated: 2017/01/04 19:08:21 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/22 03:31:53 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void			push_buff(char c, t_penv *env);
 int				prf_conv(char *format, int i, t_penv *env, va_list ap);
 int				char_chr(char c, char *chr);
 void			prf_conv_mod(t_penv *env, va_list ap);
-int				print(const char *format, ...);
+int				ft_printf(const char *format, ...);
 int				prf_flag(char *form, int i, t_penv *env);
 void			prf_flag_sharp(t_penv *env);
 void			prf_flag_zero(t_penv *env);

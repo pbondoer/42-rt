@@ -14,11 +14,27 @@ OBJDIR = ./OBJ
 
 #name of files to compile without the extension
 ITEMS = \
+		argn \
 		cam \
+		cl_vector_from_json_array \
 		main \
-		update_kernel_args \
+		materials \
+		parser/check_parsed_data \
+		parser/debug \
+		parser/default_material \
+		parser/ft_json_print_type_arborescence \
+		parser/parse_camera \
+		parser/parse_images \
+		parser/parse_lights \
+		parser/parse_objects \
+		parser/parse_render_options \
+		parser/parse_materials \
+		parser/parse_texture \
+		parser/parser \
 		prim \
-		argn
+		ray_plane \
+		textures_holder \
+		update_kernel_args
 
 #variables for Linux
 ifeq ($(shell uname),Linux)
@@ -26,11 +42,11 @@ ifeq ($(shell uname),Linux)
 #gcc/clang flags
 CFLAGS = -Wall -Wextra -Werror -Wno-deprecated -Wno-deprecated-declarations -g -O3
 #path to external includes
-PINC = ../libft/inc ../libftx2/inc ../minilibx_X11 ../libftocl/inc
+PINC = ../libft/inc ../libftx2/inc ../minilibx_X11 ../libftocl/inc ../parser/inc
 #path to libs to compile
-CLIB = ../libft ../libftx2 ../minilibx_X11 ../libftocl
+CLIB = ../libft ../libftx2 ../minilibx_X11 ../libftocl ../parser
 #exact path of lib files to add in source
-LIB = ../libftx2/libftx2.a ../libftocl/libftocl.a ../libft/libft.a ../minilibx_X11/libmlx.a
+LIB = ../libftx2/libftx2.a ../libftocl/libftocl.a ../parser/ft_json.a ../libft/libft.a ../minilibx_X11/libmlx.a
 #args passed to gcc depending on the os
 ARGS = -lOpenCL -ICL -lXext -lX11
 
@@ -40,13 +56,13 @@ endif
 ifeq ($(shell uname),Darwin)
 
 #gcc/clang flags
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 #path to external includes
-PINC = ../libft/inc ../libftx2/inc ../minilibx_macos ../libftocl/inc
+PINC = ../libft/inc ../libftx2/inc ../minilibx_macos ../libftocl/inc ../parser/inc
 #path to libs to compile
-CLIB = ../libft ../libftx2 ../minilibx_macos ../libftocl
+CLIB = ../libft ../libftx2 ../minilibx_macos ../libftocl ../parser
 #exact path of lib files to add in source
-LIB = ../libftx2/libftx2.a ../libftocl/libftocl.a ../libft/libft.a ../minilibx_macos/libmlx.a
+LIB = ../libftx2/libftx2.a ../libftocl/libftocl.a ../parser/ft_json.a ../libft/libft.a ../minilibx_macos/libmlx.a
 #args passed to gcc depending on the os
 ARGS = -framework OpenCL -framework OpenGL -framework AppKit
 

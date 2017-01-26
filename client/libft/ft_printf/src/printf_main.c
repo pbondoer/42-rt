@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   printf_main.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hmarot <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hmarot <hmarot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/14 12:04:11 by hmarot            #+#    #+#             */
-/*   Updated: 2016/06/19 11:42:09 by hmarot           ###   ########.fr       */
+/*   Updated: 2017/01/22 03:32:04 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int		print(const char *format, ...)
+int		ft_printf(const char *format, ...)
 {
 	char		*form;
 	t_penv		env;

@@ -6,11 +6,13 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/09 09:15:54 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/10 05:16:39 by pbondoer         ###   ########.fr       */
+/*   Updated: 2017/01/14 16:52:35 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <rtv1.h>
+#include <stdio.h>
+#include <time.h>
 
 int			cb_exit(int k, int s, void *p)
 {
@@ -30,6 +32,7 @@ t_light	**lights(void)
 
 t_primitive	cone(cl_float4 pos, cl_float4 direction, cl_float alpha, cl_float4 color)
 {
+	printf("%f \n", alpha * M_PI / 180.0f);
 	return ((t_primitive){.type = CONE, .position = pos,
 		.direction = direction, .radius = alpha * M_PI / 180.0f, .color = color});
 }
@@ -147,11 +150,16 @@ void		rotate_cam(double angle, t_vector axe)
 
 	q = ft_quat_rotation_build(angle, axe);
 	q = ft_quat_multiply(cam()->orientation, q);
+	cam()->orientation = q;
 	mat = ft_quat_rotation_to_matrix(NULL, q);
 	tva = ft_matrix_multply_vector_array((t_vector[3]){
-		cl_float4_to_vector(cam()->dir),
-		cl_float4_to_vector(cam()->up),
-		cl_float4_to_vector(cam()->right)}, 3, mat);
+//		cl_float4_to_vector(cam()->dir),
+//		cl_float4_to_vector(cam()->up),
+//		cl_float4_to_vector(cam()->right)
+	ft_vector(0,0,1),
+	ft_vector(0,1,0),
+	ft_vector(1,0,0)
+}, 3, mat);
 	cam()->dir = vector_to_cl_float4(tva[0]);
 	cam()->up = vector_to_cl_float4(tva[1]);
 	cam()->right = vector_to_cl_float4(tva[2]);
@@ -161,7 +169,7 @@ void		rotate_cam(double angle, t_vector axe)
 
 int			keys(t_ftx_data *data)
 {
-	t_ubmp		out;
+	static t_ubmp		out = {.size = {SW, SH}, .data = NULL};
 
 	(void)data;
 	if (data->keymap[KEY_W].status == FTX_KEY_STATUS_PRESSED)
@@ -184,7 +192,8 @@ int			keys(t_ftx_data *data)
 		rotate_cam(-0.05, ft_vector(1, 0, 0));
 	if (data->keymap[KEY_DOWN].status == FTX_KEY_STATUS_PRESSED)
 		rotate_cam(0.05, ft_vector(1, 0, 0));
-	out.size = ft_point(SW, SH);
+//	out.size = ft_point(SW, SH);
+	if (out.data == NULL)
 	out.data = (int*)ft_memalloc(sizeof(int) * SW * SH);
 	ftocl_clear_current_kernel_arg(4);
 //	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 2, sizeof(t_primitive) *
@@ -196,6 +205,7 @@ int			keys(t_ftx_data *data)
 	ftx_fill_image(ftx_data()->focused_window->vbuffer, 0x00FFFF, 1);
 	ftx_put_ubmp_img(ftx_data()->focused_window->vbuffer, ft_point(0, 0), &out,
 					NOMASK);
+//	ft_free(out.data);
 	ftx_refresh_window(ftx_data()->focused_window);
 
 	return (0);
@@ -208,16 +218,16 @@ void		rtv1(void)
 
 	argn()->screen_size = (cl_int2){.x = SW, .y = SH};
 	argn()->nb_objects = 4;
-	argn()->nb_lights = 3;
+	argn()->nb_lights = 1;
 	*prim() = (t_primitive*)ft_malloc(sizeof(t_primitive) * argn()->nb_objects);
 	*lights() = (t_light*)ft_malloc(sizeof(t_light) * argn()->nb_lights);
-	prim()[0][0] = cone((cl_float4){.x = 0, .y = 0, .z = 800, .w = 0}, (cl_float4){.x = 1, .y = 0, .z = 0, .w = 0}, 30, (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
-	prim()[0][1] = sphere((cl_float4){.x = -150, .y = 0, .z = 500, .w = 0}, 20, (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
-	prim()[0][2] = plane((cl_float4){.x = 0, .y = 0, .z = 1000, .w = 0}, (cl_float4){.x = 0, .y = 0, .z = 1, .w = 0}, (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
-	prim()[0][3] = cylinder((cl_float4){.x = 150, .y = 0, .z = 300, .w = 0}, (cl_float4){.x = 1, .y = 0, .z = 0, .w = 0}, 20, (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
-	lights()[0][0] = light((cl_float4){.x = 0, .y = 0, .z = -100, .w = 0},  (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
-	lights()[0][1] = light((cl_float4){.x = 0, .y = 300, .z = 600, .w = 0}, (cl_float4){.x = 0, .y = 1, .z = 0, .w = 0});
-	lights()[0][2] = light((cl_float4){.x = 0, .y = 30, .z = 500, .w = 0}, (cl_float4){.x = 0, .y = 0, .z = 1, .w = 0});
+	prim()[0][0] = cone((cl_float4){.x = 0, .y = 0, .z = 800, .w = 0}, (cl_float4){.x = 0, .y = 1, .z = 0, .w = 0}, 1, (cl_float4){.x = 1, .y = 0, .z = 0, .w = 0});
+	prim()[0][1] = sphere((cl_float4){.x = -150, .y = 0, .z = 500, .w = 0}, 100, (cl_float4){.x = 1, .y = 1, .z = 0, .w = 0});
+	prim()[0][2] = plane((cl_float4){.x = 0, .y = 0, .z = 1000, .w = 0}, (cl_float4){.x = 0, .y = 0, .z = 1, .w = 0}, (cl_float4){.x = 1, .y = 1, .z = 0, .w = 0});
+	prim()[0][3] = cylinder((cl_float4){.x = 150, .y = 0, .z = 300, .w = 0}, (cl_float4){.x = 1, .y = 1, .z = 0, .w = 0}, 20, (cl_float4){.x = 0, .y = 0, .z = 1, .w = 0});
+	lights()[0][0] = light((cl_float4){.x = 0, .y = 0, .z = 0, .w = 0},  (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
+	//lights()[0][1] = light((cl_float4){.x = 0, .y = 300, .z = 800, .w = 0}, (cl_float4){.x = 1, .y = 1, .z = 1, .w = 0});
+	//lights()[0][2] = light((cl_float4){.x = -150, .y = 0, .z = 500, .w = 0}, (cl_float4){.x = 1, .y = 0, .z = 1, .w = 0});
 	cam()->pos = (cl_float4){.x = 0, .y = 0, .z = 0, .w = 0};
 	cam()->vp_size = (cl_int2){.x = SW, .y = SH};
 	cam()->dist = 800;

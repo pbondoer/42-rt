@@ -62,7 +62,7 @@ endif
 ifeq ($(shell uname),Darwin)
 
 #gcc/clang flags
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 #path to external includes
 PINC = ../libft/inc ../minilibx_macos
 #path to libs to compile

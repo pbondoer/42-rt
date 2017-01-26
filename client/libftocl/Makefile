@@ -13,15 +13,16 @@ INCDIR = ./inc
 OBJDIR = ./OBJ
 
 #name of files to compile without the extension
-ITEMS = ftocl_clear_current_kernel_arg \
-		ftocl_start_current_kernel \
-		ftocl_read_current_kernel_arg \
+ITEMS = \
+		ftocl_clear_current_kernel_arg \
+		ftocl_data \
 		ftocl_end \
 		ftocl_make_program \
+		ftocl_read_current_kernel_arg \
 		ftocl_set_current_kernel \
-		ftocl_data \
+		ftocl_set_current_kernel_arg \
 		ftocl_set_current_program \
-		ftocl_set_current_kernel_arg
+		ftocl_start_current_kernel
 
 #variables for Linux
 ifeq ($(shell uname),Linux)
@@ -43,7 +44,7 @@ endif
 ifeq ($(shell uname),Darwin)
 
 #gcc/clang flags
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 #path to external includes
 PINC = ../libft/inc
 #path to libs to compile

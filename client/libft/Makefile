@@ -63,6 +63,7 @@ ITEMS = \
 		./src/complex/ft_complex_scale \
 		./src/complex/ft_complex_square \
 		./src/complex/ft_complex_substract \
+		./src/conv/ft_atod \
 		./src/conv/ft_atoi \
 		./src/conv/ft_atoi_base \
 		./src/conv/ft_atoi_extended \
@@ -71,6 +72,7 @@ ITEMS = \
 		./src/conv/ft_lsttostr \
 		./src/conv/ft_matrix_multply_vector \
 		./src/conv/ft_quat_rotation_to_matrix \
+		./src/conv/ft_str_to_id64 \
 		./src/env/ft_env_clear \
 		./src/env/ft_env_init \
 		./src/env/ft_getenv \
@@ -93,7 +95,6 @@ ITEMS = \
 		./src/global/ft_global_malloc_stack \
 		./src/global/ft_init \
 		./src/global/ft_log \
-		./src/int/ft_int_swap \
 		./src/io/ft_putchar \
 		./src/io/ft_putchar_fd \
 		./src/io/ft_putendl \
@@ -121,6 +122,8 @@ ITEMS = \
 		./src/lst/ft_lstnew \
 		./src/math/ft_acos \
 		./src/math/ft_asin \
+		./src/math/ft_clampd \
+		./src/math/ft_clampi \
 		./src/math/ft_cos \
 		./src/math/ft_modd \
 		./src/math/ft_modf \
@@ -155,6 +158,8 @@ ITEMS = \
 		./src/mem/ft_memdup \
 		./src/mem/ft_memmove \
 		./src/mem/ft_memset \
+		./src/mem/ft_swapd \
+		./src/mem/ft_swapi \
 		./src/object/ft_object_add \
 		./src/object/ft_object_free_node \
 		./src/object/ft_object_new \
@@ -195,6 +200,10 @@ ITEMS = \
 		./src/queue/ft_queue_new \
 		./src/queue/ft_queue_pull \
 		./src/queue/ft_queue_push \
+		./src/rand/ft_global_xorshift1024star \
+		./src/rand/ft_rand \
+		./src/rand/ft_srand \
+		./src/rand/ft_xorshift1024star \
 		./src/str/ft_str_clear_commentaries \
 		./src/str/ft_stracat \
 		./src/str/ft_strcat \
@@ -217,6 +226,7 @@ ITEMS = \
 		./src/str/ft_strlsplit \
 		./src/str/ft_strmap \
 		./src/str/ft_strmapi \
+		./src/str/ft_strmerge \
 		./src/str/ft_strncat \
 		./src/str/ft_strncmp \
 		./src/str/ft_strncpy \
@@ -238,6 +248,7 @@ ITEMS = \
 		./src/tab/ft_tab_alloc \
 		./src/tab/ft_tab_block_alloc \
 		./src/tab/ft_tab_free \
+		./src/test/ft_is_double \
 		./src/test/ft_isalnum \
 		./src/test/ft_isalpha \
 		./src/test/ft_isascii \
@@ -272,7 +283,11 @@ ITEMS = \
 		./src/xtree/ft_xtree_add_next \
 		./src/xtree/ft_xtree_add_shild \
 		./src/xtree/ft_xtree_new \
-		./src/conv/ft_str_to_id64
+		./src/path/ft_dirname \
+		./src/mem/ft_memrchr \
+		./src/path/ft_realpath \
+		./src/path/ft_path_clean_slashes \
+		./src/mem/ft_reallocf
 
 #variables for Linux
 ifeq ($(shell uname),Linux)
@@ -294,7 +309,7 @@ endif
 ifeq ($(shell uname),Darwin)
 
 #gcc/clang flags
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 #path to external includes
 PINC =
 #path to libs to compile

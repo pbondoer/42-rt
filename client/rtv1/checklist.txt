@@ -1,0 +1,20 @@
+RTV1:
+
+obligatoire:
+-raytracer: ok
+-plan / sphere / cylindre / cone: ok
+-translation / rotation: ok
+-expose: ok
+-fichier scene / arguments: non
+-lumière / ombre: ok
+bonus:
+-multi-spots: ok
+-brillance: ok
+
+restant:
+-fichier scene
+
+RT:
+
+obligatoire:
+-rtv1: duh

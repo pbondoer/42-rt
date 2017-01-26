@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 14:39:36 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/07 18:40:00 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/25 16:10:20 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@
 # define NORM_LIBFT 0
 
 # ifndef FT_USE_FINAL_FREE
-#  define FT_USE_FINAL_FREE 1
+#  define FT_USE_FINAL_FREE 0
 # endif
 
 # ifndef NORM_LIBFT
@@ -123,6 +123,7 @@
 #  define EDOM		33
 #  define ERANGE	34
 #  define EINTERN	((unsigned int)-1)
+#  define ENOENV	((unsigned int)-2)
 # endif
 
 # define MAXERRNOD 34
@@ -704,6 +705,12 @@ typedef struct			s_fixpoint
 	t_fix				y;
 }						t_fixpoint;
 
+typedef struct			s_xorshift1024star
+{
+	int					p;
+	unsigned long long	s[16];
+}						t_xorshift1024star;
+
 # define TIME_DEFAULT_WEEKDAY_0 "Sunday"
 # define TIME_DEFAULT_WEEKDAY_1 "Monday"
 # define TIME_DEFAULT_WEEKDAY_2 "Tuesday"
@@ -795,12 +802,6 @@ typedef struct			s_gnl_tcf
 }						t_gnl_tcf;
 
 int						get_next_line(const int fd, char **line);
-
-/*
-** int manipulation functions
-*/
-
-void					ft_int_swap(int *a, int *b);
 
 /*
 ** type conversion function
@@ -1246,5 +1247,38 @@ void					**ft_tab_block_alloc(size_t x, size_t y, size_t block);
 t_pile					*ft_global_atend_stack(void);
 int						ft_atend(void (*func)(void));
 uint64_t				ft_str_to_id64(char *str);
+double					ft_atod(const char *str);
+int						ft_is_double(const char *str);
+char					*ft_strmerge(char *a, char *b);
+double					ft_clampd(double v, double min, double max);
+int						ft_clampi(int v, int min, int max);
+void					ft_swapd(double *p1, double *p2);
+void					ft_swapi(int *p1, int *p2);
+
+# define XORSHIFT1024STAR 1
+
+# define RAND_MODE XORSHIFT1024STAR
+
+unsigned long long		ft_xorshift1024star(void);
+void					ft_srand(int seed);
+t_xorshift1024star		*ft_global_xorshift1024star(void);
+int						ft_rand(void);
+char					*ft_dirname(char *path);
+void					*ft_memrchr(const void *s, int c, size_t n);
+
+# ifndef PATH_MAX
+
+/*
+** Posix-ly correct PATH_MAX (posix recommend at least 256)
+*/
+
+#  define PATH_MAX 1024
+# endif
+
+char					*ft_realpath(char *path, char resolved_path[PATH_MAX]);
+char					*ft_path_clean_slashes(char *path);
+
+void					*ft_reallocf(void *ptr, size_t size_original,
+												size_t size_new);
 
 #endif

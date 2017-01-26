@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 09:53:54 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/03 12:51:37 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/21 19:51:12 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,24 +25,10 @@
 
 # define FTOCL_ALL_ARGS ((cl_uint)-1)
 
-# define USE_DOUBLE 0
-
-# if USE_DOUBLE
-
-typedef cl_double	t_cl_float;
-typedef double		t_float;
-
-# else
-
-typedef cl_float	t_cl_float;
-typedef float		t_float;
-
-# endif
-
 typedef struct		s_cl_comp
 {
-	t_cl_float	r;
-	t_cl_float	i;
+	cl_float	r;
+	cl_float	i;
 }					t_cl_comp;
 
 typedef struct		s_cl_point

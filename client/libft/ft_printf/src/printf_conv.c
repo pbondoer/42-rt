@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   printf_conv.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hmarot <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hmarot <hmarot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/14 12:04:11 by hmarot            #+#    #+#             */
-/*   Updated: 2016/06/19 11:48:52 by hmarot           ###   ########.fr       */
+/*   Updated: 2017/01/22 03:32:41 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		prf_conv(char *format, int i, t_penv *env, va_list ap)
 {
 	int		j;
-	void	(*tab_conv[17])(t_penv *env, va_list ap);
+	void	(*tab_conv[15])(t_penv *env, va_list ap);
 
 	tab_conv[0] = prf_conv_mod;
 	tab_conv[1] = prf_con_id;
@@ -32,9 +32,7 @@ int		prf_conv(char *format, int i, t_penv *env, va_list ap)
 	tab_conv[12] = prf_con_c;
 	tab_conv[13] = prf_con_lc;
 	tab_conv[14] = prf_con_ls;
-	tab_conv[15] = prf_con_m;
-	tab_conv[16] = prf_con_b;
-	j = char_chr(format[i], "%idDuxXoOUpscCSmb");
+	j = char_chr(format[i], "%idDuxXoOUpscCS");
 	if (j == -1)
 		return (-1);
 	tab_conv[j](env, ap);
