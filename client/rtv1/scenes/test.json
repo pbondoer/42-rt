@@ -1,0 +1,77 @@
+{
+	"render_options":
+	{
+		"size": [400, 400],
+		"lighting":
+		{
+			"ambient": 0.05
+		}
+	},
+	"camera":
+	{
+		"position": [0, 0, 0],
+		"direction": [0, 0, 1],
+		"up": [0, 1, 0],
+		"right": [1, 0, 0],
+		"vp_size": [400, 400],
+		"dist": 800
+	},
+	"materials":
+	{
+		"red":
+		{
+			"color": [1, 0, 0],
+			"diffuse": 1.0,
+			"specular": 1.0
+		},
+		"blue":
+		{
+			"color": [0, 0, 1],
+			"diffuse": 1.0,
+			"specular": 1.0
+		}
+	},
+	"objects":
+	[
+		{
+			"type": "cone",
+			"position": [0, 0, 200],
+			"direction": [0, 1, 0],
+			"radius": 20,
+			"material": "red"
+		},
+		{
+			"type": "plane",
+			"position": [0, 0, 1000],
+			"direction": [0, 0, 1],
+			"material":
+			{
+				"color": [1, 1, 1],
+				"diffuse": 1.0,
+				"specular": 1.0
+			}
+		},
+		{
+			"type": "cylinder",
+			"position": [150, 0, 200],
+			"direction": [0, 1, 0],
+			"radius": 20,
+			"material": "blue"
+		},
+		{
+			"type": "cone",
+			"position": [0, 0, 500],
+			"direction": [0, 1, 0],
+			"radius": 45,
+			"material": "red"
+		}
+	],
+	"lights":
+	[
+		{ "position": [0, 0, 0], "color": [1, 1, 1] },
+		{ "position": [50, 0, 0], "color": [1, 1, 1] },
+		{ "position": [100, 0, 0], "color": [1, 1, 1] },
+		{ "position": [-100, 0, 0], "color": [1, 1, 1] },
+		{ "position": [-50, 0, 0], "color": [1, 1, 1] }
+	]
+}

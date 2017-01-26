@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/09 09:15:54 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/26 06:22:15 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/26 10:35:51 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,10 +199,8 @@ int			keys(t_ftx_data *data)
 
 //	printf("%p\n", ftx_data()->focused_window->vbuffer);
 
-	ftx_fill_image(ftx_data()->focused_window->vbuffer, 0x00FFFF, 1);
 	ftx_put_ubmp_img(ftx_data()->focused_window->vbuffer, ft_point(0, 0), &out,
 					NOMASK);
-
 	ftx_refresh_window(ftx_data()->focused_window);
 //	ft_free(out.data);
 	return (0);

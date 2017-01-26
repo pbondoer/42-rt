@@ -20,20 +20,15 @@ ITEMS = \
 		main \
 		materials \
 		parser/check_parsed_data \
-		parser/debug \
 		parser/default_material \
-		parser/ft_json_print_type_arborescence \
 		parser/parse_camera \
-		parser/parse_images \
 		parser/parse_lights \
 		parser/parse_objects \
 		parser/parse_render_options \
 		parser/parse_materials \
-		parser/parse_texture \
 		parser/parser \
 		prim \
 		ray_plane \
-		textures_holder \
 		update_kernel_args \
 		lights
 

@@ -1,42 +1,14 @@
 typedef enum		e_prim_type
 {
-	INVALID = -1, SPHERE = 0, PLANE = 1, CONE = 2, CYLINDER = 3, PARABOLOID = 4
+	INVALID = -1, SPHERE = 0, PLANE = 1, CONE = 2, CYLINDER = 3
 }					t_prim_type;
-
-typedef enum		e_perturbation_type
-{
-	NONE = 0, SINE = 1, CHECKERBOARD = 2
-}					t_perturbation_type;
-
-typedef struct		s_perturbation
-{
-	t_perturbation_type	normal;
-	t_perturbation_type	color;
-}					t_perturbation;
-
-typedef struct		s_texture
-{
-	ulong			info_index;
-	float2			stretch;
-}					t_texture;
 
 typedef struct		s_material
 {
 	float4			color;
 	float			diffuse;
 	float			specular;
-	float			alpha;
-	float			refraction;
-	t_perturbation	perturbation;
-	t_texture		texture;
-	t_texture		bumpmap;
 }					t_material;
-
-typedef struct		s_img_info
-{
-	ulong			index;
-	int2			size;
-}					t_img_info;
 
 typedef struct		s_camera
 {
@@ -48,13 +20,6 @@ typedef struct		s_camera
 	float2			vp_size;
 }					t_camera;
 
-typedef struct		s_limit
-{
-	int				relative;
-	float4			high;
-	float4			low;
-}					t_limit;
-
 typedef struct		s_primitive
 {
 	t_prim_type		type;
@@ -62,7 +27,6 @@ typedef struct		s_primitive
 	float4			direction;
 	float			radius;
 	uint			material;
-	t_limit			limit;
 }					t_primitive;
 
 typedef struct		s_light
@@ -78,13 +42,6 @@ typedef struct		s_argn
 	int				nb_lights;
 	float			ambient;
 	float			direct;
-	float			global_illumination;
-	int				global_illumination_samples;
-	int				antialias;
-	int				bounce_depth;
-	int				filter;
-	int				stereoscopy;
-	int				nb_info;
 	int				nb_materials;
 }					t_argn;
 
@@ -163,13 +120,6 @@ float	local_length(float4 v)
 # define EPSILON 0.0001f
 #endif
 
-// antialias 0 = 1x1 (none), 1 = 3x3, 2 = 5x5, 3 = 7x7, etc.
-#ifndef AA
-# define AA 0
-#endif
-
-
-
 float	addv(float4 v)
 {
 	return (v.x + v.y + v.z);
@@ -205,7 +155,6 @@ int		sphere_intersect(__global t_primitive *obj, t_ray *ray, float *dist)
 int		cylinder_intersect(__global t_primitive *obj, t_ray *ray, float *dist)
 {
 	float4 pos = obj->position - ray->origin;
-	normalize(obj->direction);
 	float4 p = CROSS(pos, obj->direction);
 	float4 r = CROSS(ray->direction, obj->direction);
 
@@ -220,10 +169,7 @@ int		cone_intersect(__global t_primitive *obj, t_ray *ray, float *dist)
 	float4 pos = ray->origin - obj->position;
 	float4 dir = -ray->direction;
 
-	normalize(obj->direction);
-	normalize(dir);
-	float r = 1 + pow(tan(obj->radius), 2);
-	//printf("radius = %f \n",tan(obj->radius));
+	float r = 1 + pow(tan(obj->radius * M_PI / 180.0f), 2);
 	float dd = DOT(dir, obj->direction);
 
 	float a = DOT(dir, dir) - (r * pow(dd, 2));
@@ -261,21 +207,12 @@ int		solve_quadratic(float a, float b, float c, float *dist)
 		return (1);
 	}
 
-	/*
-	if (x1 > 0) // then x2 > 0 && x2 > x1
-	{
-		if (x1 < *dist)
-		{
-			*dist = x1;
-			return (1);
-		}
-	}
-	*/
 	return (0);
 }
 
 int		intersect(__global t_primitive *obj, t_ray *ray, float *dist)
 {
+	obj->direction = NORMALIZE(obj->direction);
 	switch (obj->type)
 	{
 		case SPHERE:
@@ -286,34 +223,37 @@ int		intersect(__global t_primitive *obj, t_ray *ray, float *dist)
 			return cone_intersect(obj, ray, dist);
 		case CYLINDER:
 			return cylinder_intersect(obj, ray, dist);
+		default:
+			return (0);
 	}
 
-	// unknown object type
 	return (0);
 }
 
 float4	get_normal(__global t_primitive *obj, float4 point)
 {
-	float t;
+	float4 n = (float4)(0, 0, 0, 0);
 
+	obj->direction = NORMALIZE(obj->direction);
 	switch (obj->type)
 	{
 		case SPHERE:
-			return NORMALIZE(point - obj->position);
+			n = point - obj->position;
+			break;
 		case PLANE:
-			return obj->direction;
+			n = obj->direction;
+			break;
 		case CYLINDER:
-			obj->direction = NORMALIZE(obj->direction);
-			//t =  addv(DOT((point - obj->position), NORMALIZE(obj->direction))) / LENGTH(NORMALIZE(obj->direction));
-			//return NORMALIZE(point - (obj->position + NORMALIZE(obj->direction) * t));
-			return NORMALIZE(point - obj->position + (obj->direction * DOT(obj->direction, obj->position - point)));
+			n = point - obj->position + (obj->direction * DOT(obj->direction, obj->position - point));
+			break;
 		case CONE:
-			obj->direction = NORMALIZE(obj->direction);
-			return NORMALIZE(point - obj->position + (obj->direction * -DOT(point, obj->direction) / pow(cos(obj->radius), 2)));
-			//t = DOT(-obj->direction, obj->position) + DOT(point, obj->direction) / addv(pow(obj->direction, 2));
-			//return NORMALIZE(point - (obj->position + obj->direction * t));
+			n = point - obj->position + (obj->direction * -DOT(point, obj->direction) / pow(cos(obj->radius), 2));
+			break;
+		default:
+			return (n);
 	}
-	return (float4)(0, 0, 0, 0);
+
+	return NORMALIZE(n);
 }
 
 float4	phong(float4 dir, float4 norm)
@@ -336,9 +276,7 @@ __kernel void	example(							//main kernel, called for each ray
 		__global t_primitive	*objects,	//set of objects in the scene, the number of objects (and so the limit of this array), is stored in argn
 		__global t_light		*lights,
 		__global t_camera		*cam,
-		__global t_img_info		*img_info,
-		__global t_material		*materials,
-		__global int			*raw_bmp)
+		__global t_material		*materials)
 {
 	//mode 2: we use 1D Kernels:
 	size_t i = get_global_id(0);	//id of the kernel in the global call
@@ -352,106 +290,83 @@ __kernel void	example(							//main kernel, called for each ray
 	t_ray ray;
 	ray.origin = cam->pos;
 
-	int aa_x;
-	int aa_y;
 	float4 color = (float4)(0, 0, 0, 0);
 
-	// antialias
-	int samples = 0;
-	for (aa_y = -AA; aa_y <= AA; aa_y++)
+	ray.direction = NORMALIZE(cam->vpul + NORMALIZE(cam->right) * x - NORMALIZE(cam->up) * y);
+
+	float dist = MAXFLOAT;
+	int id = -1;
+	int cur = 0;
+	int	t_hit = 0;
+	int s_hit = 0;
+	for (cur = 0; cur < argn->nb_objects; cur++)
 	{
-		for (aa_x = -AA; aa_x <= AA; aa_x++)
+		if ((t_hit = intersect(&objects[cur], &ray, &dist))) //on sauvegarde dans une variable temporaire la veleur de hit (pour éviter de devoir rappeler la fonction intersect)
 		{
-			ray.direction = NORMALIZE(cam->vpul + NORMALIZE(cam->right) * (x + (aa_x / ((AA + 1) * 2.0f))) - NORMALIZE(cam->up) * (y + (aa_y / ((AA + 1) * 2.0f))));
-
-			float dist = MAXFLOAT;
-			int id = -1;
-			int cur = 0;
-			int	t_hit = 0;
-			int s_hit = 0;
-			for (cur = 0; cur < argn->nb_objects; cur++)
-			{
-				if ((t_hit = intersect(&objects[cur], &ray, &dist))) //on sauvegarde dans une variable temporaire la veleur de hit (pour éviter de devoir rappeler la fonction intersect)
-				{
-					id = cur;
-					s_hit = t_hit; //si il y avait collision, on sauvegarde la valeur de t_hit dans s_hit pour l'eventuelle inversion de normale plus tard
-				}
-			}
-
-			// no primitive was hit
-			if (id == -1)
-				continue ;
-
-			__global t_primitive *prim = &objects[id];
-			float4 collision = ray.origin + ray.direction * dist;
-			float4 cur_color = (float4)(0, 0, 0, 0);
-
-			// we hit something... lights, maestro!
-			int cur_l;
-			t_ray ray_l;
-			for (cur_l = 0; cur_l < argn->nb_lights; cur_l++)
-			{
-				t_light light = lights[cur_l];
-
-				// check if our light source is blocked by an object
-				// shadows start a tiny amount from the actual sphere to prevent rounding errors
-				float dist_l = LENGTH(light.position - collision);
-				ray_l.direction = NORMALIZE(light.position - collision);
-				ray_l.origin = collision + ray_l.direction * 0.1f;
-				int hit = 0;
-
-				dist = MAXFLOAT;
-				for (cur = 0; cur < argn->nb_objects; cur++)
-				{
-					if ((hit = intersect(&objects[cur], &ray_l, &dist))	> 0)
-					{
-						if (dist > EPSILON && dist < dist_l) // it is between us
-							break ;
-						else // it is behind us
-							hit = 0;
-					}
-				}
-
-				// did we hit something? don't calculate color for this light, shadow!
-				if (hit)
-					continue ;
-
-				// get the color for this light
-				float4 norm = get_normal(prim, collision);
-				if (s_hit == -1) //si on était dans la primitive, on inverse la normale
-					norm = -norm;
-
-				// ambient light
-//				cur_color += prim->color * 0.05f; // TODO: ambient amount should be configurable
-				cur_color += materials[prim->material].color * 0.05f;
-
-				// diffuse lighting
-				float scal;
-				if ((scal = DOT(ray_l.direction, norm)) > 0)
-//					cur_color += prim->color * light.color * scal; // TODO: diffuse coef
-					cur_color += materials[prim->material].color * light.color * scal;
-
-				// specular highlights (needs pow to make the curve sharper)
-				float4 ir = phong(-ray_l.direction, norm);
-				if (scal > 0 && (scal = DOT(ray_l.direction, ir)) > 0)
-					cur_color += light.color * pow(scal, 20); // TODO: specular coef
-			}
-
-			color += cur_color / (float)argn->nb_lights;
-			samples++;
+			id = cur;
+			s_hit = t_hit; //si il y avait collision, on sauvegarde la valeur de t_hit dans s_hit pour l'eventuelle inversion de normale plus tard
 		}
 	}
-	// divide by the total amount of samples
-	color /= samples;
 
-//	out[i] = color_to_int(color);
-	int index = materials[objects->material].texture.info_index;
-	t_img_info info = img_info[index];
-	int t = info.index + (int)y * info.size.x + (int)x;
-	int o = raw_bmp[t] & 0x00FFFFFF;
-	//int o = ((unsigned int)raw_bmp[t] >> 8);
-	//o = ((raw_bmp[t] & 0x0000FF00) << 8) | ((raw_bmp[t] & 0xFF000000) >> 24) | ((raw_bmp[t] & 0x00FF0000) >> 8) ;
-	if (i == 1000)
-		printf("index: %d, t: %d, y: %d, %x, %x, %x\n", index, t, info.size.y, raw_bmp[0], raw_bmp[t], o);
-	out[i] = o;
+	// no primitive was hit, no need to go further
+	if (id == -1)
+		return ;
+
+	__global t_primitive *prim = &objects[id];
+	t_material mat = materials[prim->material];
+	float4 collision = ray.origin + ray.direction * dist;
+	float4 cur_color = (float4)(0, 0, 0, 0);
+
+	// we hit something... lights, maestro!
+	int cur_l;
+	t_ray ray_l;
+	for (cur_l = 0; cur_l < argn->nb_lights; cur_l++)
+	{
+		t_light light = lights[cur_l];
+
+		// check if our light source is blocked by an object
+		// shadows start a tiny amount from the actual sphere to prevent rounding errors
+		float dist_l = LENGTH(light.position - collision);
+		ray_l.direction = NORMALIZE(light.position - collision);
+		ray_l.origin = collision + ray_l.direction * 0.1f;
+		int hit = 0;
+
+		dist = MAXFLOAT;
+		for (cur = 0; cur < argn->nb_objects; cur++)
+		{
+			if ((hit = intersect(&objects[cur], &ray_l, &dist))	> 0)
+			{
+				if (dist > EPSILON && dist < dist_l) // it is between us
+					break ;
+				else // it is behind us
+					hit = 0;
+			}
+		}
+
+		// did we hit something? don't calculate color for this light, shadow!
+		if (hit)
+			continue ;
+
+		// get the color for this light
+		float4 norm = get_normal(prim, collision);
+		if (s_hit == -1) //si on était dans la primitive, on inverse la normale
+			norm = -norm;
+
+		// ambient light
+		cur_color += mat.color * argn->ambient;
+
+		// diffuse lighting
+		float scal;
+		if ((scal = DOT(ray_l.direction, norm)) > 0)
+			cur_color += mat.color * mat.diffuse * light.color * scal;
+
+		// specular highlights (needs pow to make the curve sharper)
+		float4 ir = phong(-ray_l.direction, norm);
+		if (scal > 0 && (scal = DOT(ray_l.direction, ir)) > 0)
+			cur_color += light.color * pow(scal, 20) * mat.specular;
+	}
+
+	color += cur_color / (float)argn->nb_lights;
+
+	out[i] = color_to_int(color);
 }
