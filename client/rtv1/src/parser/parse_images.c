@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/25 17:10:35 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/26 06:18:13 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/26 09:38:26 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,8 @@ void				parse_image(t_json_value *sp)
 			sizeof(char**) * textures_holder()->nb_info,
 			sizeof(char**) * (textures_holder()->nb_info + 1));
 		textures_holder()->info = ft_reallocf(textures_holder()->info,
-			sizeof(t_img_info*) * textures_holder()->nb_info,
-			sizeof(t_img_info*) * (textures_holder()->nb_info + 1));
+			sizeof(t_img_info) * textures_holder()->nb_info,
+			sizeof(t_img_info) * (textures_holder()->nb_info + 1));
 		textures_holder()->path[textures_holder()->nb_info] = ft_strdup(buff);
 		(void)add_texture();
 		++textures_holder()->nb_info;

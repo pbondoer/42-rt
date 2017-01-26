@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/26 02:02:23 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/26 02:37:37 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/26 09:41:49 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ cl_uint				parse_object_material(t_json_value *o)
 			sizeof(t_material) * materials()->nb_materials,
 			sizeof(t_material) * (materials()->nb_materials + 1));
 		materials()->name = ft_reallocf(materials()->name,
-			sizeof(t_material) * materials()->nb_materials,
-			sizeof(t_material) * (materials()->nb_materials + 1));
+			sizeof(char *) * materials()->nb_materials,
+			sizeof(char *) * (materials()->nb_materials + 1));
 		materials()->name[materials()->nb_materials] = NULL;
 		materials()->materials[materials()->nb_materials] =
 			parse_material(o, default_material());
