@@ -6,11 +6,23 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/26 01:59:11 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/26 02:09:13 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/27 08:53:20 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <rtv1.h>
+
+void				parse_camera_1(void)
+{
+	cl_float4	t;
+
+	t = cam()->dir;
+	cam()->origin_dir = ft_vector(t.x, t.y, t.z);
+	t = cam()->up;
+	cam()->origin_up = ft_vector(t.x, t.y, t.z);
+	t = cam()->right;
+	cam()->origin_right = ft_vector(t.x, t.y, t.z);
+}
 
 void				parse_camera_0(t_json_value *vps)
 {
@@ -55,4 +67,5 @@ void				parse_camera(t_json_value *c)
 			v->ptr != NULL)
 		cam()->dist = (v->type == number) ?
 			(cl_float) * (double*)v->ptr : (cl_float) * (int*)v->ptr;
+	parse_camera_1();
 }

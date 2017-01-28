@@ -16,6 +16,7 @@ OBJDIR = ./OBJ
 ITEMS = \
 		argn \
 		cam \
+		cl_float4_operations \
 		cl_vector_from_json_array \
 		main \
 		materials \
@@ -28,7 +29,7 @@ ITEMS = \
 		parser/parse_materials \
 		parser/parser \
 		prim \
-		ray_plane \
+		rtv1 \
 		update_kernel_args \
 		lights
 
@@ -38,11 +39,11 @@ ifeq ($(shell uname),Linux)
 #gcc/clang flags
 CFLAGS = -Wall -Wextra -Werror -Wno-deprecated -Wno-deprecated-declarations -g -O3
 #path to external includes
-PINC = ../libft/inc ../libftx2/inc ../minilibx_X11 ../libftocl/inc ../parser/inc
+PINC = libft/inc libftx2/inc minilibx_X11 libftocl/inc libftjson/inc
 #path to libs to compile
-CLIB = ../libft ../libftx2 ../minilibx_X11 ../libftocl ../parser
+CLIB = libft libftx2 minilibx_X11 libftocl libftjson
 #exact path of lib files to add in source
-LIB = ../libftx2/libftx2.a ../libftocl/libftocl.a ../parser/ft_json.a ../libft/libft.a ../minilibx_X11/libmlx.a
+LIB = libftx2/libftx2.a libftocl/libftocl.a libftjson/libftjson.a libft/libft.a minilibx_X11/libmlx.a
 #args passed to gcc depending on the os
 ARGS = -lOpenCL -ICL -lXext -lX11
 
@@ -54,11 +55,11 @@ ifeq ($(shell uname),Darwin)
 #gcc/clang flags
 CFLAGS = -Wall -Wextra -Werror -g
 #path to external includes
-PINC = ../libft/inc ../libftx2/inc ../minilibx_macos ../libftocl/inc ../parser/inc
+PINC = libft/inc libftx2/inc minilibx_macos libftocl/inc libftjson/inc
 #path to libs to compile
-CLIB = ../libft ../libftx2 ../minilibx_macos ../libftocl ../parser
+CLIB = libft libftx2 minilibx_macos libftocl libftjson
 #exact path of lib files to add in source
-LIB = ../libftx2/libftx2.a ../libftocl/libftocl.a ../parser/ft_json.a ../libft/libft.a ../minilibx_macos/libmlx.a
+LIB = libftx2/libftx2.a libftocl/libftocl.a libftjson/libftjson.a libft/libft.a minilibx_macos/libmlx.a
 #args passed to gcc depending on the os
 ARGS = -framework OpenCL -framework OpenGL -framework AppKit
 
@@ -120,6 +121,7 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f "log.txt"
 
 re: fclean all
 

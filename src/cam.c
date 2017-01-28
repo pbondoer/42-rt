@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/03 14:37:45 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/26 11:03:26 by pbondoer         ###   ########.fr       */
+/*   Updated: 2017/01/27 08:43:44 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,10 +64,9 @@ void		rotate_cam(double angle, t_vector axe)
 	cam()->orientation = q;
 	mat = ft_quat_rotation_to_matrix(NULL, q);
 	tva = ft_matrix_multply_vector_array((t_vector[3]) {
-			ft_vector(0, 0, 1),
-			ft_vector(0, 1, 0),
-			ft_vector(1, 0, 0)
-			}, 3, mat);
+			cam()->origin_dir,
+			cam()->origin_up,
+			cam()->origin_right}, 3, mat);
 	cam()->dir = vector_to_cl_float4(tva[0]);
 	cam()->up = vector_to_cl_float4(tva[1]);
 	cam()->right = vector_to_cl_float4(tva[2]);

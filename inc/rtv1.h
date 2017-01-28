@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/15 00:05:50 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/26 11:04:25 by pbondoer         ###   ########.fr       */
+/*   Updated: 2017/01/27 09:41:51 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <libft.h>
 # include <libftx.h>
 # include <libftocl.h>
-# include <ft_json.h>
+# include <libftjson.h>
 
 # define OCL_SOURCE_PATH "./scl/rtv1.cl"
 
@@ -55,6 +55,9 @@ typedef struct		s_camera
 	cl_float2		vp_size;
 	float			dist;
 	t_quaternion	orientation;
+	t_vector		origin_dir;
+	t_vector		origin_up;
+	t_vector		origin_right;
 }					t_camera;
 
 typedef struct		s_primitive
@@ -82,7 +85,7 @@ typedef struct		s_argn
 	cl_int			nb_materials;
 }					t_argn;
 
-cl_float4			*ray_plane(const t_camera *cam, const cl_int2 screen_size);
+void				rtv1(void);
 t_camera			*cam(void);
 void				rotate_cam(double angle, t_vector axe);
 void				calc_vpul(void);
@@ -102,5 +105,10 @@ void				parse_objects(t_json_value *o);
 void				parse_render_options(t_json_value *ro);
 void				*parse_materials(t_json_value *m);
 t_material			parse_material(t_json_value *m, t_material out);
+cl_float4			cl_float4_add(cl_float4 a, cl_float4 b);
+void				cl_float4_p_add(cl_float4 *a, cl_float4 b);
+cl_float4			cl_float4_scale(cl_float4 v, cl_float s);
+cl_float4			cl_float4_sub(cl_float4 a, cl_float4 b);
+void				cl_float4_p_sub(cl_float4 *a, cl_float4 b);
 
 #endif

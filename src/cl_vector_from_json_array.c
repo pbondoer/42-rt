@@ -6,11 +6,10 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/24 03:54:02 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/24 04:47:44 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/27 08:01:48 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_json.h>
 #include <rtv1.h>
 
 cl_float4			cl_vector_from_json_array(t_json_value *node,
