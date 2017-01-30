@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rtv1.h>
+#include <rt.h>
 
 cl_float4	cl_float4_add(cl_float4 a, cl_float4 b)
 {

@@ -6,11 +6,11 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/26 02:03:32 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/26 02:04:16 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/29 01:10:40 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rtv1.h>
+#include <rt.h>
 
 int					check_null_cl_float4(cl_float4 v)
 {

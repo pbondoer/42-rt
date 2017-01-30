@@ -6,11 +6,11 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/26 01:59:11 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/27 08:53:20 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/29 01:11:58 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rtv1.h>
+#include <rt.h>
 
 void				parse_camera_1(void)
 {

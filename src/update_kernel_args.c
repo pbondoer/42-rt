@@ -6,32 +6,46 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/03 14:38:52 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/26 10:14:02 by pbondoer         ###   ########.fr       */
+/*   Updated: 2017/01/29 20:16:53 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rtv1.h>
+#include <rt.h>
 #include <stdio.h>
 
 void		update_kernel_args(void)
 {
-	argn()->nb_materials = materials()->nb_materials;
 	ftocl_clear_current_kernel_arg(0);
 	ftocl_set_current_kernel_arg(CL_MEM_WRITE_ONLY, 0, sizeof(cl_int) *
 		argn()->screen_size.x * argn()->screen_size.y, NULL);
+
+	argn()->nb_info = textures_holder()->nb_info;
+	argn()->nb_materials = materials()->nb_materials;
 	ftocl_clear_current_kernel_arg(1);
 	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 1, sizeof(t_argn),
-								(void*)argn());
+		(void*)argn());
+
 	ftocl_clear_current_kernel_arg(2);
 	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 2, sizeof(t_primitive) *
 		argn()->nb_objects, (void*)*prim());
+
 	ftocl_clear_current_kernel_arg(3);
 	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 3, sizeof(t_light) *
 		argn()->nb_lights, (void*)*lights());
+
 	ftocl_clear_current_kernel_arg(4);
 	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 4, sizeof(t_camera),
-								(void*)cam());
+		(void*)cam());
+
 	ftocl_clear_current_kernel_arg(5);
-	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 5, sizeof(t_material) *
-				argn()->nb_materials, (void*)materials()->materials);
+	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 5, sizeof(t_img_info) *
+		argn()->nb_info + 1, (void*)textures_holder()->info);
+
+	ftocl_clear_current_kernel_arg(6);
+	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 6, sizeof(t_material) *
+		argn()->nb_materials, (void*)materials()->materials);
+
+	ftocl_clear_current_kernel_arg(7);
+	ftocl_set_current_kernel_arg(CL_MEM_READ_ONLY, 7, sizeof(cl_int) *
+		textures_holder()->total_raw_size + 1, (void*)textures_holder()->raw_bmp);
 }

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rtv1.h>
+#include <rt.h>
 
 cl_float4			cl_vector_from_json_array(t_json_value *node,
 											cl_float4 default_return)

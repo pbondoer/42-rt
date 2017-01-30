@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rtv1.c                                             :+:      :+:    :+:   */
+/*   rt.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/27 09:40:29 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/27 09:44:31 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/29 23:52:53 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rtv1.h>
+#include <rt.h>
 
 int			cb_exit(int k, int s, void *p)
 {
@@ -26,6 +26,7 @@ void		update(int u)
 	static t_ubmp		out = {.size = {.x = 0, .y = 0}, .data = NULL};
 	size_t				size;
 
+	(void)u;
 	if (u <= 0)
 		return ;
 	if (out.data == NULL)
@@ -88,12 +89,12 @@ int			keys(t_ftx_data *data)
 	return (0);
 }
 
-void		rtv1(void)
+void		rt(void)
 {
 	calc_vpul();
 	update_kernel_args();
 	ftx_new_window(ft_point(argn()->screen_size.x, argn()->screen_size.y),
-			"RTv1", NULL);
+			"RT", NULL);
 	ftx_key_hook(KEY_EXIT, cb_exit, NULL);
 	update(1);
 	ftx_loop_hook(&keys);

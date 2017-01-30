@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   materials.c                                        :+:      :+:    :+:   */
+/*   ft_json_pack_value.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/25 17:20:29 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/26 04:38:56 by hmartzol         ###   ########.fr       */
+/*   Created: 2017/01/17 17:47:23 by hmartzol          #+#    #+#             */
+/*   Updated: 2017/01/27 07:56:02 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rt.h>
+#include <libftjson.h>
+#include <libft.h>
 
-t_material_holder	*materials(void)
+t_json_value	*ft_json_pack_value(t_json_value *parent,
+									t_json_value_type type, void *ptr)
 {
-	static t_material_holder	m = {.nb_materials = 0, .name = NULL,
+	t_json_value	*out;
 
-	.materials = NULL};
-	return (&m);
+	if ((out = (t_json_value*)ft_malloc(sizeof(t_json_value))) == NULL)
+		return (NULL);
+	out->type = type;
+	out->ptr = ptr;
+	out->parent = parent;
+	return (out);
 }

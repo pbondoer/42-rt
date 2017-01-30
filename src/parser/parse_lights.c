@@ -6,11 +6,11 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/26 02:05:29 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/26 05:11:34 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/29 20:30:36 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rtv1.h>
+#include <rt.h>
 
 void				parse_lights(t_json_value *l)
 {

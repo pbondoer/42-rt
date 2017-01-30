@@ -2,10 +2,10 @@
 AUTHOR = hmartzol
 
 #name of compiled file
-NAME = rt
+NAME = libftjson.a
 
 #args passed to executable if executed from "make test"
-EXEARGS = scenes/test.json
+EXEARGS =
 
 #path to folder containing source files, project header and resulting objects
 SRCDIR = ./src
@@ -14,41 +14,37 @@ OBJDIR = ./OBJ
 
 #name of files to compile without the extension
 ITEMS = \
-		argn \
-		cam \
-		cl_float4_operations \
-		cl_vector_from_json_array \
-		main \
-		materials \
-		textures_holder \
-		parser/check_parsed_data \
-		parser/default_material \
-		parser/parse_camera \
-		parser/parse_lights \
-		parser/parse_objects \
-		parser/parse_render_options \
-		parser/parse_materials \
-		parser/parse_images \
-		parser/parse_texture \
-		parser/parser \
-		prim \
-		rt \
-		update_kernel_args \
-		lights
+		ft_json_check_array_types \
+		ft_json_check_string \
+		ft_json_evaluate_array_size \
+		ft_json_evaluate_object_size \
+		ft_json_evaluate_value_type \
+		ft_json_free \
+		ft_json_new_array \
+		ft_json_new_number \
+		ft_json_new_object \
+		ft_json_new_pair \
+		ft_json_new_string \
+		ft_json_new_value \
+		ft_json_pack_value \
+		ft_json_parse_src \
+		ft_json_print_type \
+		ft_json_search_pair_in_object \
+		ft_json_string
 
 #variables for Linux
 ifeq ($(shell uname),Linux)
 
 #gcc/clang flags
-CFLAGS = -Wall -Wextra -Werror -Wno-deprecated -Wno-deprecated-declarations -g -O3
+CFLAGS = -Wall -Wextra -Werror -g -O3
 #path to external includes
-PINC = libft/inc libftx2/inc minilibx_X11 libftocl/inc libftjson/inc
+PINC = ../libft/inc
 #path to libs to compile
-CLIB = libft libftx2 minilibx_X11 libftocl libftjson
+CLIB = ../libft
 #exact path of lib files to add in source
-LIB = libftx2/libftx2.a libftocl/libftocl.a libftjson/libftjson.a libft/libft.a minilibx_X11/libmlx.a
+LIB = ../libft/libft.a
 #args passed to gcc depending on the os
-ARGS = -lOpenCL -ICL -lXext -lX11
+ARGS =
 
 endif
 
@@ -58,13 +54,13 @@ ifeq ($(shell uname),Darwin)
 #gcc/clang flags
 CFLAGS = -Wall -Wextra -Werror -g
 #path to external includes
-PINC = libft/inc libftx2/inc minilibx_macos libftocl/inc libftjson/inc
+PINC = ../libft/inc
 #path to libs to compile
-CLIB = libft libftx2 minilibx_macos libftocl libftjson
+CLIB = ../libft
 #exact path of lib files to add in source
-LIB = libftx2/libftx2.a libftocl/libftocl.a libftjson/libftjson.a libft/libft.a minilibx_macos/libmlx.a
+LIB = ../libft/libft.a
 #args passed to gcc depending on the os
-ARGS = -framework OpenCL -framework OpenGL -framework AppKit
+ARGS =
 
 endif
 
@@ -124,7 +120,6 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
-	rm -f "log.txt"
 
 re: fclean all
 

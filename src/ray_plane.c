@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rtv1.h>
+#include <rt.h>
 
 cl_float4	*ray_plane(const t_camera *cam, const cl_int2 screen_size)
 {
