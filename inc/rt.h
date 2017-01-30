@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/15 00:05:50 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/30 05:22:22 by pbondoer         ###   ########.fr       */
+/*   Updated: 2017/01/30 14:34:52 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 # define OCL_SOURCE_PATH "./scl/raytracer.cl"
 # define NONE 0
+# define UPD 1
 
 typedef enum		e_prim_type
 {
@@ -130,6 +131,7 @@ typedef struct		s_argn
 	cl_int2			screen_size;
 	cl_int			nb_objects;
 	cl_int			nb_lights;
+	cl_int			map_primitives;
 	cl_float		ambient;
 	cl_float		direct;
 	cl_int			antialias;
@@ -141,15 +143,35 @@ typedef struct		s_argn
 	cl_int			nb_materials;
 }					t_argn;
 
+typedef struct		s_mouse
+{
+	int				is_select;
+	int				x;
+	int				y;
+}					t_mouse;
+
+typedef struct		s_cmd
+{
+	char			*scene;
+	char			*output;
+}					t_cmd;
+
+int					command_line(int argc, char **argv); 
+void				direct_output(char *path);
 void				rt(void);
+void				update(int c);
 t_camera			*cam(void);
 void				rotate_cam(double angle, t_vector axe);
 void				calc_vpul(void);
 void				update_kernel_args(void);
 t_primitive			**prim(void);
 t_argn				*argn(void);
+t_ubmp				*out(void);
+t_ubmp				*prim_map(void);
+t_cmd				*cmd(void);
 t_light				**lights(void);
 void				parser(const char *src);
+void				init_output(void);
 cl_float4			cl_vector_from_json_array(t_json_value *node,
 						cl_float4 default_return);
 t_textures_holder	*textures_holder(void);
@@ -165,10 +187,16 @@ void				parse_render_options(t_json_value *ro);
 t_texture			parse_texture(t_json_value *t, t_texture default_return);
 void				*parse_materials(t_json_value *m);
 t_material			parse_material(t_json_value *m, t_material out);
+cl_float4			cl_float4_normalize(cl_float4 v);
 cl_float4			cl_float4_add(cl_float4 a, cl_float4 b);
 void				cl_float4_p_add(cl_float4 *a, cl_float4 b);
 cl_float4			cl_float4_scale(cl_float4 v, cl_float s);
 cl_float4			cl_float4_sub(cl_float4 a, cl_float4 b);
 void				cl_float4_p_sub(cl_float4 *a, cl_float4 b);
+cl_float4			ft_vector_thales(cl_float4 origin, cl_float4 v1,
+						cl_float4 v2, cl_float4 r);
+int					mouse_click(int key, int x, int y, void *data);
+int					mouse_move(int x, int y, void *data);
+int					mouse_off(int key, int x, int y, void *data);
 
 #endif

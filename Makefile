@@ -19,6 +19,10 @@ ITEMS = \
 		cl_float4_operations \
 		cl_vector_from_json_array \
 		main \
+		cmd \
+		out \
+		mouse \
+		direct_output \
 		materials \
 		textures_holder \
 		parser/check_parsed_data \
@@ -34,7 +38,8 @@ ITEMS = \
 		prim \
 		rt \
 		update_kernel_args \
-		lights
+		lights \
+		ft_vector_thales
 
 #variables for Linux
 ifeq ($(shell uname),Linux)

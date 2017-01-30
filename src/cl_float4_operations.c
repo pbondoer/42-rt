@@ -6,11 +6,20 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/27 08:19:36 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/27 08:34:08 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/30 14:37:25 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <rt.h>
+
+cl_float4	cl_float4_normalize(cl_float4 v)
+{
+	cl_float	t;
+	
+	if ((v.x == 0.0f && v.y == 0.0f && v.z == 0.0f) || (t = (v.x * v.x + v.y * v.y + v.z * v.z)) == 1.0f)
+		return (v);
+	return (cl_float4_scale(v, 1.0f / ft_sqrtf(t)));
+}
 
 cl_float4	cl_float4_add(cl_float4 a, cl_float4 b)
 {

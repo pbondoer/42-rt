@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/26 02:02:23 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/29 20:13:03 by pbondoer         ###   ########.fr       */
+/*   Updated: 2017/01/30 14:35:42 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,8 @@ t_primitive			parse_object_0(t_json_value *o, t_primitive p)
 		(cl_float4){.x = 0, .y = 0, .z = 0, .w = 0});
 	v[0] = ft_json_search_pair_in_object(o,
 		(t_json_string){.length = 9, .ptr = "direction"});
-	p.direction = cl_vector_from_json_array(v[0],
-					(cl_float4){.x = 0, .y = 0, .z = 1, .w = 0});
+	p.direction = cl_float4_normalize(cl_vector_from_json_array(v[0],
+					(cl_float4){.x = 0, .y = 0, .z = 1, .w = 0}));
 	v[0] = ft_json_search_pair_in_object(o,
 		(t_json_string){.length = 5, .ptr = "limit"});
 	v[1] = ft_json_search_pair_in_object(v[0],

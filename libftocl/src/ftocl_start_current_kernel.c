@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 11:20:59 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/03 12:14:19 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/29 21:52:48 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,11 @@
 */
 
 /*
-** this function is non block, the kernel might be still running when this
-** function return
-*/
-
-/*
 ** global_work_size must be dividable by local_work_size, if local_work_size is
 ** NULL, OpenCL will figure wich local_work_size is the best.
 */
 
-cl_event	ftocl_start_current_kernel(cl_uint work_dim,
+void			ftocl_start_current_kernel(cl_uint work_dim,
 				const size_t *global_work_size, const size_t *local_work_size)
 {
 	t_ocl_data	*data;
@@ -38,7 +33,8 @@ cl_event	ftocl_start_current_kernel(cl_uint work_dim,
 	data = ftocl_data();
 	err = clEnqueueNDRangeKernel(data->queue, data->current_kernel->kernel,
 			work_dim, NULL, global_work_size, local_work_size, 0, NULL, &event);
+	clWaitForEvents(1, &event);
+	clReleaseEvent(event);
 	if (err != CL_SUCCESS)
 		ft_error(EINTERN, "starting of kernel failed\n");
-	return (event);
 }

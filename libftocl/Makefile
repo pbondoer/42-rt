@@ -19,6 +19,7 @@ ITEMS = \
 		ftocl_end \
 		ftocl_make_program \
 		ftocl_read_current_kernel_arg \
+		ftocl_run_percent_callback \
 		ftocl_set_current_kernel \
 		ftocl_set_current_kernel_arg \
 		ftocl_set_current_program \

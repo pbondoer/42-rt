@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 09:53:54 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/21 19:51:12 by hmartzol         ###   ########.fr       */
+/*   Updated: 2017/01/29 21:55:09 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,8 +87,8 @@ int					ftocl_set_current_kernel_arg(cl_mem_flags flags,
 										cl_uint index, size_t size, void *ptr);
 int					ftocl_set_current_kernel(uint64_t kernel_id);
 int					ftocl_set_current_program(uint64_t program_id);
-cl_event			ftocl_start_current_kernel(cl_uint work_dim,
-						const size_t *global_work_size,
-						const size_t *local_work_size);
-
+void				ftocl_start_current_kernel(cl_uint work_dim,
+				const size_t *global_work_size, const size_t *local_work_size);
+cl_int				ftocl_run_percent_callback(const size_t global_work_size,
+		int arg_index, void (*callback)(int percent, void *data), void *data);
 #endif

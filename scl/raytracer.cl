@@ -96,6 +96,7 @@ typedef struct		s_argn
 	int2			screen_size;
 	int				nb_objects;
 	int				nb_lights;
+	int				map_primitives;
 	float			ambient;
 	float			direct;
 	int				antialias;
@@ -547,7 +548,6 @@ int		raytrace(t_ray *ray, float4 *color, float4 *point,
 
 		// get the normal for this intersection point
 		norm = get_normal(prim, mat, collision);
-		prim->direction = NORMALIZE(prim->direction);
 
 		// invert the normal if we're "inside" the primitive
 		if (*result == -1)
@@ -676,21 +676,19 @@ float4	skybox(t_texture tex, t_ray ray, __global int *raw_bmp, __global t_img_in
 
 __kernel void	rt_kernel(
 		__global int			*out,
+		__global int			*prim_map,
 		__global t_argn			*argn,
 		__global t_primitive	*objects,
 		__global t_light		*lights,
 		__global t_camera		*cam,
 		__global t_img_info		*img_info,
 		__global t_material		*materials,
-		__global int			*raw_bmp)
+		__global int			*raw_bmp,
+		__global int			*shift)
 {
 	//mode 2: we use 1D Kernels:
-	size_t i = get_global_id(0); //id of the kernel in the global call
+	size_t i = get_global_id(0) + *shift; //id of the kernel in the global call
 
-	if (i == 0)
-	{
-		//printf("textures: %d\n", argn->nb_info);
-	}
 	// the amount of kernels executed can be more than the screen_size, protect
 	// against bad access
 	if (i >= (size_t)argn->screen_size.x * (size_t)argn->screen_size.y)
@@ -749,6 +747,9 @@ __kernel void	rt_kernel(
 				int result;
 				int cur_id = raytrace(&cur_ray, &cur_color, &collision, &result, objects, lights, argn, materials, img_info, raw_bmp);
 
+				if (cur_ray.depth == 0 && argn->map_primitives)
+					prim_map[i] = cur_id + 1;
+
 				// do things based on ray type
 				switch (cur_ray.type)
 				{
@@ -760,7 +761,6 @@ __kernel void	rt_kernel(
 						break;
 				}
 				count++;
-
 
 				// if we have exceeded our depth or didnt hit anything, skip
 				if (cur_ray.depth >= argn->bounce_depth || cur_id == -1)

@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ftx_refresh_window.c                               :+:      :+:    :+:   */
+/*   ft_vector_thales.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/17 09:28:39 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/30 06:44:16 by pbondoer         ###   ########.fr       */
+/*   Created: 2017/01/30 00:02:06 by hmartzol          #+#    #+#             */
+/*   Updated: 2017/01/30 13:39:06 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-#include <mlx.h>
-#include <libftx.h>
+#include <rt.h>
 
-int	ftx_refresh_window(t_window *win)
+cl_float ft_float4_distance(cl_float4 v)
 {
-	if (ftx_data()->mlx == NULL || win == NULL || win->vbuffer == NULL)
-		return (-1);
-	mlx_put_image_to_window(ftx_data()->mlx, win->win, win->vbuffer->img, 0, 0);
-	mlx_do_sync(ftx_data()->mlx);
-	return (0);
+	return ((cl_float)ft_sqrtd(v.x * v.x + v.y * v.y + v.z * v.z + v.w * v.w));
+}
+
+cl_float4	ft_vector_thales(cl_float4 origin, cl_float4 v1, cl_float4 v2,
+		cl_float4 r)
+{
+	cl_float		tmp;
+	(void) origin;
+
+	if ((tmp = ft_float4_distance(v1)) == 0.0)
+		return ((cl_float4){.x=0.0f, .y = 0.0f, .z = 0.0f, .w = 0.0f});
+	return (cl_float4_scale(r, ft_float4_distance(v2) / tmp));
 }
