@@ -134,7 +134,7 @@ int		cone_intersect(__global t_primitive *obj, t_ray *ray, float *dist);
 int		paraboloid_intersect(__global t_primitive *obj, t_ray *ray, float *dist);
 int		intersect(__global t_primitive *obj, t_ray *ray, float *dist);
 int		solve_quadratic(float a, float b, float c, float *dist);
-float4	get_normal(__global t_primitive *obj, __global t_material *mat, float4 point);
+float4	get_normal(__global t_primitive *obj, __global t_material *mat, float4 point, t_ray *ray);
 float4	phong(float4 dir, float4 norm);
 float4	color_texture(__global t_primitive *prim, t_texture tex, float4 normal, t_img_info info, __global int *raw_bmp);
 float4	skybox(t_texture tex, t_ray ray, __global int *raw_bmp, __global t_img_info *img_info);
@@ -374,7 +374,7 @@ inline int		intersect(__global t_primitive *obj, t_ray *ray, float *dist)
 	return (i);
 }
 
-inline float4	get_normal(__global t_primitive *obj, __global t_material *mat, float4 point)
+inline float4	get_normal(__global t_primitive *obj, __global t_material *mat, float4 point, t_ray *ray)
 {
 	float4 n = (float4)(0, 0, 0, 0);
 	float r;
@@ -391,8 +391,11 @@ inline float4	get_normal(__global t_primitive *obj, __global t_material *mat, fl
 			n = DOT(obj->direction, obj->position - point) * obj->direction + (point - obj->position);
 			break;
 		case CONE:
+			r = DOT(ray->direction, obj->direction) * ray->dist + DOT(ray->origin - obj->position, obj->direction);
+			n = point - obj->position - (1.0f + pow((float)tan(obj->radius * M_PI / 180.0f), 2)) * obj->direction * r;
+			/*
 			r = obj->radius * M_PI / 180.0f;
-			n = point - obj->position + (obj->direction * -DOT(point, obj->direction) / pow(COS(r), 2));
+			n = point - obj->position + (obj->direction * -DOT(point, obj->direction) / pow(COS(r), 2));*/
 			break;
 		case PARABOLOID:
 			n = point - obj->position - obj->direction * obj->radius;
@@ -547,7 +550,7 @@ int		raytrace(t_ray *ray, float4 *color, float4 *point,
 		collision = ray->origin + ray->direction * ray->dist;
 
 		// get the normal for this intersection point
-		norm = get_normal(prim, mat, collision);
+		norm = get_normal(prim, mat, collision, ray);
 
 		// invert the normal if we're "inside" the primitive
 		if (*result == -1)
@@ -768,7 +771,7 @@ __kernel void	rt_kernel(
 
 				// beautiful reflections
 				__global t_material *mat = &materials[objects[cur_id].material];
-				float4 normal = get_normal(&objects[cur_id], mat, collision);
+				float4 normal = get_normal(&objects[cur_id], mat, collision, &cur_ray);
 
 				float refl = mat->reflection;
 				if (refl > EPSILON)
